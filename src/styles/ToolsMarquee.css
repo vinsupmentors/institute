@@ -1,0 +1,75 @@
+/* ======================================================
+   TOOLS & TECHNOLOGIES – MARQUEE
+====================================================== */
+
+.tools-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.tools-track {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+  animation: toolsScroll 28s linear infinite;
+}
+
+/* Card */
+.tool-card {
+  min-width: 140px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+
+/* Icon */
+.tool-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+/* Name */
+.tool-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #0f172a;
+  text-align: center;
+}
+
+/* Animation */
+@keyframes toolsScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover (premium touch) */
+.tools-marquee:hover .tools-track {
+  animation-play-state: paused;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 576px) {
+  .tool-card {
+    min-width: 120px;
+    padding: 14px 12px;
+  }
+
+  .tool-icon {
+    width: 36px;
+    height: 36px;
+  }
+}

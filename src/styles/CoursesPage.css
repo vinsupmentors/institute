@@ -1,0 +1,316 @@
+/* ===================================================
+   COURSES PAGE — GLOBAL STYLES
+=================================================== */
+
+.courses-page {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===================================================
+   HERO SECTION (IMAGE + FORM)
+=================================================== */
+.hero-two-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+  margin: 40px auto 60px auto;
+}
+
+.hero-left-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img-box {
+  width: 100%;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  box-shadow: 0 22px 40px rgba(0,0,0,0.18);
+}
+
+.hero-right-form {
+  width: 38%;
+}
+
+.enquiry-card-full {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+/* Mobile */
+@media(max-width: 980px){
+  .hero-two-col {
+    flex-direction: column;
+  }
+  .hero-right-form {
+    width: 100%;
+  }
+}
+
+/* ===================================================
+   COURSES GRID
+=================================================== */
+.courses-grid-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 28px;
+  margin-top: 24px;
+}
+
+.grid-card {
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  transition: 0.25s ease;
+}
+
+.grid-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.gc-img-wrap img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.gc-top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.gc-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.gc-hours {
+  font-size: 14px;
+  color: #e22027;
+  font-weight: 800;
+}
+
+.gc-desc {
+  margin: 10px 0;
+  color: #374151;
+  font-size: 14px;
+  min-height: 55px;
+}
+
+.btn-small-primary {
+  padding: 8px 14px;
+  background: linear-gradient(90deg,#00287A,#e22027);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+@media(max-width: 900px){
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================================================
+   WHY CHOOSE SECTION
+=================================================== */
+.why-vinsup {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.why-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+  transition: 0.25s;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.10);
+}
+
+.wc-ico {
+  font-size: 24px;
+  color: #00287A;
+  margin-bottom: 8px;
+}
+
+.why-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.why-card p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #555;
+}
+
+@media(max-width: 900px){
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================================================
+   UPCOMING BATCHES (from your component)
+=================================================== */
+.upcoming-batches {
+  margin: 50px auto;
+}
+
+/* ===================================================
+   FAQ SECTION — Centered
+=================================================== */
+
+.courses-faq {
+  width: 100%;
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.courses-faq details {
+  background: #fff;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  cursor: pointer;
+}
+
+.courses-faq summary {
+  font-weight: 700;
+  font-size: 17px;
+  list-style: none;
+}
+
+.courses-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.courses-faq p {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #555;
+}
+
+.car-item{
+    color: #e22027;
+}
+
+
+/* ========== HERO WITHOUT ENQUIRY ========== */
+
+.hero-one-col {
+  width: 100%;
+  margin: 40px auto 50px auto;
+}
+
+.hero-banner {
+  width: 100%;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+@media(max-width: 900px){
+  .hero-banner {
+    height: 260px;
+  }
+}
+
+/* ===================================================
+   CAROUSEL SECTION (New Section)
+=================================================== */
+
+/* Optional: If you want to move the wrapper height/width to CSS */
+.carousel-wrapper {
+  /* height and width are fine remaining inline for quick visibility */
+}
+
+.carousel-image {
+  /* Critical styles for stacking and sizing */
+  width: 100%;
+  height: 100%;             /* Use 100% since wrapper has fixed 300px height */
+  object-fit: cover;
+  position: absolute;       /* Stacks all images on top of each other */
+  top: 0;
+  left: 0;
+  
+  /* The opacity/transition is controlled by inline style in JSX */
+}
+
+/* Add a desktop size limit if needed */
+.courses-page .container {
+    /* If you want to limit the size of the carousel section */
+    /* max-width: 1200px; */
+}
+/* ===================================================
+   CAROUSEL FIX - Positioning and Sizing
+=================================================== */
+
+.carousel-wrapper {
+  /* This class ensures the parent container has a clear boundary for absolute positioning */
+  /* Styles are currently inline in JSX, but keeping this for future CSS migration */
+}
+
+.carousel-image {
+  /* These properties were previously inline but need to be in CSS for reliable rendering */
+  
+  /* CRITICAL: Forces image to take 100% of the parent (300px height) */
+  width: 100%;
+  height: 100%;             
+  
+  /* CRITICAL: Ensures the image covers the area without distorting the element */
+  object-fit: cover;
+  
+  /* CRITICAL: Stacks all images precisely on top of each other */
+  position: absolute;       
+  top: 0;
+  left: 0;
+}

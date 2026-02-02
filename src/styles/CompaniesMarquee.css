@@ -1,0 +1,87 @@
+.companies-section {
+  width: 100%;
+  text-align: center;
+
+
+}
+
+.companies-title {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 20px;     /* reduced */
+  background: linear-gradient(90deg, #6302e8, #d60024);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Row container */
+.company-row {
+  width: 100%;
+  overflow: hidden;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  line-height: 0;            /* 🔥 removes hidden gaps */
+}
+
+/* Track that scrolls */
+.company-track {
+  display: flex;
+  gap: 35px;
+  width: max-content;
+
+  align-items: center;
+  height: auto;
+}
+
+
+/* Logo card */
+.company-card {
+  width: 110px;
+  height: 70px;
+  background: white;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+}
+
+.company-card img {
+  display: block;            /* 🔥 removes bottom ghost space */
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+}
+
+.company-row {
+  margin-bottom: 0;
+  padding-bottom: 4px;
+}
+
+/* ============ UPDATED ANIMATION SPEEDS ============ */
+
+.scroll-left {
+  animation: scroll-left 60s linear infinite;  /* slower */
+}
+
+.scroll-right {
+  animation: scroll-left 50s linear infinite; /* slower */
+}
+
+.scroll-left-slow {
+  animation: scroll-left 60s linear infinite;  /* slowest */
+}
+
+/* Keyframes */
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}

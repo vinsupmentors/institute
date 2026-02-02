@@ -1,0 +1,766 @@
+/* ============================================ 
+   COURSE PAGE STRUCTURE
+============================================ */
+
+.course-page {
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ============================================
+   HERO SECTION — IMAGE + FORM
+============================================ */
+
+.course-hero {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 90%;
+  margin: auto;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+/* LEFT SIDE IMAGE */
+.course-hero-left {
+  flex: 0 0 60%;
+}
+
+.course-hero-img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* RIGHT SIDE FORM */
+.course-hero-right {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.course-form-box {
+  width: 100%;
+}
+
+/* ============================================
+   SECTION TITLES
+============================================ */
+
+.course-section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+/* ============================================
+   GENERIC CONTENT BOX
+============================================ */
+
+.course-section {
+  width: 90%;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  margin-bottom: 50px;
+}
+
+/* ============================================
+   CAREER SPLIT (TEXT + IMAGE PLACEHOLDER)
+============================================ */
+
+.career-split {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.career-left {
+  flex: 1;
+}
+
+.career-text {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.career-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.career-image-box {
+  width: 100%;
+  height: 450px;
+  border: 2px dashed #bbb;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #777;
+}
+
+/* ============================================
+   TOOLS MARQUEE
+============================================ */
+
+.tools-marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.tools-track {
+  display: flex;
+  gap: 40px;
+  animation: scroll 25s linear infinite;
+}
+
+.tool-item {
+  padding: 12px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ============================================
+   MODULE CARDS
+============================================ */
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.module-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: #fafafa;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.module-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.module-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.module-card li {
+  padding: 5px 0;
+  border-bottom: 1px dashed #ddd;
+  font-size: 15px;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+@media (max-width: 900px) {
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-hero {
+    flex-direction: column;
+  }
+
+  .career-split {
+    flex-direction: column;
+  }
+}
+/* Container spacing */
+.courses-grid-wrapper.container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+
+/* ---- PREMIUM COURSE CARD ---- */
+.course-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+/* Hover animation */
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+
+/* TITLE + HOURS */
+.cc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cc-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0a1b4f;
+}
+
+.cc-hours {
+  font-size: 16px;
+  font-weight: 700;
+  color: #d1003f;
+}
+
+
+/* DESCRIPTION */
+.cc-desc {
+  margin: 14px 0 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+
+/* BOTTOM ROW */
+.cc-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* ---- BIGGER BUTTON ---- */
+.cc-btn {
+  padding: 12px 26px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(90deg,#0a1b4f,#d1003f);
+  transition: all 0.3s ease;
+}
+
+.cc-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+
+/* MODE STYLING */
+.cc-mode {
+  font-size: 15px;
+  font-weight: 600;
+  color: #555;
+}
+
+.cc-mode span {
+  color: #8200e8;
+  font-weight: 700;
+}
+/* Center the entire Courses section */
+.courses-grid-wrapper {
+  width: 100%;
+  max-width: 1250px;     /* Controls total width */
+  margin: 0 auto;         /* Centers horizontally */
+  text-align: center;     /* Centers heading & inline text */
+}
+
+/* Center the heading */
+.courses-grid-wrapper .section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Center the grid + cards */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 32px;
+  justify-content: center;   /* Centers cards */
+  align-items: stretch;
+}
+
+/* Premium glossy card look */
+.grid-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(150,150,150,0.18);
+  box-shadow: 0px 6px 24px rgba(0,0,0,0.08);
+
+  transition: all 0.3s ease;
+}
+
+/* Hover animation */
+.grid-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.12);
+  border-color: rgba(0,0,0,0.22);
+}
+
+/* Bigger button */
+.btn-small-primary {
+  font-size: 16px;
+  padding: 10px 22px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+/* The outer wrapper */
+.courses-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* The centered inner container */
+.courses-container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;  /* left/right gap */
+}
+
+/* Center heading */
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Cards grid */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+  justify-items: center;     /* Key: Centers the cards */
+}
+
+/* Card styling */
+.grid-card {
+  width: 100%;
+  max-width: 380px;
+  background: white;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(150,150,150,0.16);
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.grid-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 28px rgba(0,0,0,0.12);
+}
+
+/* Title + Hours */
+.gc-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Mode and Button row */
+.gc-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+/* Mode text */
+.gc-mode {
+  font-size: 14px;
+  color: #444;
+}
+
+.gc-mode span {
+  font-weight: 600;
+  color: #8a00c8;
+}
+
+/* Bigger button */
+.btn-small-primary {
+  font-size: 16px;
+  padding: 10px 22px;
+  border-radius: 10px;
+}
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.grid-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+
+  border-radius: 20px;
+  padding: 28px;
+  transition: 0.4s ease;
+}
+.grid-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+
+  border-radius: 20px;
+  padding: 28px;
+  transition: 0.4s ease;
+}
+.grid-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0px 15px 35px rgba(0,0,0,0.15),
+    0px 5px 15px rgba(255,255,255,0.4) inset;
+}
+/* ============================
+   PREMIUM CARD ANIMATION PACK
+   ============================ */
+
+/* Fade–Up on Entry */
+.card-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.9s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Lift + Shadow */
+.card-hover {
+  transition: all 0.35s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Smooth Glow Border */
+.card-glow {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.4s ease, border 0.3s ease;
+}
+
+.card-glow:hover {
+  border-color: rgba(255, 0, 90, 0.6);
+  box-shadow: 0 0 22px rgba(255, 0, 90, 0.4);
+}
+
+/* Scale-in Animation */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.85);
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.course-card:nth-child(1) { animation-delay: 0.1s; }
+.course-card:nth-child(2) { animation-delay: 0.2s; }
+.course-card:nth-child(3) { animation-delay: 0.3s; }
+.course-card:nth-child(4) { animation-delay: 0.4s; }
+.course-card:nth-child(5) { animation-delay: 0.5s; }
+.course-card:nth-child(6) { animation-delay: 0.6s; }
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.course-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  min-height: 260px; /* Forces equal height */
+  box-shadow: 2px 2px 2px blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Section Heading */
+.section-title.red-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 800;
+  color: #7a003c;       /* Deep premium red */
+  margin-bottom: 40px;
+  position: relative;
+  animation: fadeUp 0.8s ease;
+}
+
+/* Red underline effect */
+.section-title.red-title::after {
+  content: "";
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(90deg, #d40065, #950044);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+/* -------------------------
+   PREMIUM VIEW DETAILS BUTTON
+-------------------------- */
+.course-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 180px;
+  background: linear-gradient(135deg, #081a4b, #a0003d);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: 0.25s ease-in-out;
+}
+
+/* Hover Effect */
+.course-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #0a2264, #b00045);
+  box-shadow: 0 8px 25px rgba(160, 0, 70, 0.4);
+}
+
+/* Button Click/Ripple Animation */
+.course-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensures button stays centered in cards */
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+/* FOOTER WRAPPER (mode + button in one line) */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  width: 100%;
+}
+
+/* MODE LABEL */
+.course-mode {
+  font-size: 16px;
+  font-weight: 600;
+  color: #081a4b;
+}
+
+.course-mode strong {
+  color: #82004a;
+  font-weight: 700;
+}
+
+/* PREMIUM BUTTON */
+.course-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #081a4b, #a0003d);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: 0.25s ease;
+}
+
+/* HOVER */
+.course-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #0a2660, #b0004b);
+  box-shadow: 0 8px 25px rgba(160, 0, 70, 0.4);
+}
+
+/* ACTIVE */
+.course-btn:active {
+  transform: scale(0.96);
+}
+.course-card {
+  transition: all 0.35s ease;
+  transform-style: preserve-3d;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow:2px 2px 10px rgba(255, 1, 1, 0.903);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.course-card {
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+}
+
+.course-card:hover {
+  transform: perspective(800px) rotateX(3deg) rotateY(-3deg);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+  box-shadow:2px 2px 10px rgba(255, 1, 1, 0.903);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.course-card {
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.course-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.course-card:hover::after {
+  content: "";
+  position: absolute;
+  top: -80%;
+  left: -80%;
+  width: 250%;
+  height: 250%;
+  background: linear-gradient(135deg, rgba(231, 231, 231, 0.4), rgba(87, 90, 93, 0.4));
+  transform: rotate(25deg);
+  animation: shine 0.9s forwards;
+}
+
+@keyframes shine {
+  from { transform: translate(-100%, -100%) rotate(25deg); }
+  to   { transform: translate(100%, 100%) rotate(25deg); }
+}
+
+/* ============================
+   FAQ SECTION
+============================ */
+.faq-section {
+  margin-top: 60px;
+  margin-bottom: 80px;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+/* FAQ card style */
+.faq-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+/* Hover animation */
+.faq-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* Summary line */
+.faq-card summary {
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #081a4b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Force entire FAQ block to center content */
+.faq-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* FAQ section width control */
+.faq-section {
+  width: 100%;
+  max-width: 900px;        /* forces center width */
+  padding: 20px;
+}
+
+/* FAQ items container */
+.faq-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* centers FAQ cards */
+}
+
+/* Individual card */
+.faq-card {
+  width: 100%;
+  max-width: 900px;       /* ensures equal centered width */
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  cursor: pointer;
+  overflow: hidden;
+}

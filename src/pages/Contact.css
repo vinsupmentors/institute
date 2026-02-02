@@ -1,0 +1,366 @@
+/* -----------------------------------------------------
+   SECTION — GENERAL PAGE SPACING
+----------------------------------------------------- */
+.section {
+  padding: 70px 0;
+}
+
+.section-inner {
+  width: 90%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* -----------------------------------------------------
+    HEADING STYLES (Same as your Home.jsx)
+----------------------------------------------------- */
+.section-title {
+  font-size: 34px;
+  font-weight: 800;
+  color: #7a003c;
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #c62839;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 4px;
+}
+
+/* -----------------------------------------------------
+     CONTACT — TWO COLUMN LAYOUT
+----------------------------------------------------- */
+.contact-details {
+  padding-top: 40px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Title centered but only in left section */
+.contact-title-center {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* LEFT SIDE INFO BLOCK */
+.contact-left {
+  padding-right: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Each contact item */
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.info-item h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #7a003c;
+}
+
+.info-item p {
+  margin: 5px 0 0;
+  color: #333;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.emoji {
+  font-size: 26px;
+  margin-top: 4px;
+}
+
+/* -----------------------------------------------------
+     RIGHT SIDE MAP
+----------------------------------------------------- */
+.contact-right iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 18px;
+  background: #f2f2f2;
+}
+
+/* -----------------------------------------------------
+     SOCIAL MEDIA ICONS SECTION
+----------------------------------------------------- */
+.social-section {
+  margin-top: 80px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.social-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: 0.25s ease;
+}
+
+.social-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.social-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  border-color: #8b2b51;
+}
+
+/* -----------------------------------------------------
+      CTA — Start Your Career
+----------------------------------------------------- */
+.start-career-box {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.start-career-text {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.start-career-email {
+  font-size: 20px;
+  font-weight: 700;
+  color: #c62839;
+  cursor: pointer;
+}
+
+/* -----------------------------------------------------
+     RESPONSIVE DESIGN — TABLET & MOBILE
+----------------------------------------------------- */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact-title-center {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .social-icon {
+    width: 52px;
+    height: 52px;
+  }
+}/* SIDE-BY-SIDE LAYOUT */
+.action-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.action-box {
+  width: 380px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 24px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  background: #fff;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.action-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  border-color: #8b2b51;
+}
+
+/* ICON STYLING */
+.action-icon {
+  font-size: 32px;
+  margin-right: 5px;
+}
+
+/* RESPONSIVE — STACK ON MOBILE */
+@media (max-width: 900px) {
+  .action-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action-box {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+/* -----------------------------------------------------
+   JOB SECTION — WRAPPER
+----------------------------------------------------- */
+.job-listings {
+  padding-top: 40px;
+}
+
+.job-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+  max-width: 1150px;   /* Increased width so 2 cards fit nicely */
+  margin: 40px auto 0;
+  align-items: stretch;
+}
+
+/* -----------------------------------------------------
+   JOB CARD BASE DESIGN
+----------------------------------------------------- */
+.job-card {
+  padding: 30px 35px;
+  border: 1px solid #e5e5e5;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.25s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+  border-color: #c62839;
+}
+
+/* -----------------------------------------------------
+   TITLE + DESCRIPTION
+----------------------------------------------------- */
+.job-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.job-short {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* -----------------------------------------------------
+   JOB DETAILS (LINE BY LINE)
+----------------------------------------------------- */
+.job-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.job-info p {
+  margin: 0;
+  color: #222;
+}
+
+/* Bold label */
+.job-info b {
+  color: #7a003c;
+  margin-right: 6px;
+}
+
+/* Emoji alignment correction */
+.job-info p b::after {
+  content: "";
+  margin-right: 4px;
+}
+
+/* -----------------------------------------------------
+   READ MORE BUTTON
+----------------------------------------------------- */
+.btn-read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #c62839;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.btn-read-more:hover {
+  background: #7a003c;
+}
+
+/* -----------------------------------------------------
+    LOADING + EMPTY STATE
+----------------------------------------------------- */
+.no-jobs {
+  text-align: center;
+  color: #777;
+  font-size: 18px;
+  padding: 40px 0;
+}
+
+/* -----------------------------------------------------
+    RESPONSIVE — MOBILE OPTIMIZATION
+----------------------------------------------------- */
+@media (max-width: 768px) {
+  .job-card {
+    padding: 24px;
+  }
+
+  .job-title {
+    font-size: 22px;
+  }
+
+  .job-info {
+    font-size: 15px;
+  }
+
+  .btn-read-more {
+    font-size: 15px;
+    padding: 8px 16px;
+  }
+}
+@media (max-width: 992px) {
+  .job-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

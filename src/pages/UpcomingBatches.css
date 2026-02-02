@@ -1,0 +1,69 @@
+.upcoming-wrapper {
+  margin-top: 60px;
+  padding: 0 30px;
+}
+
+/* MAIN MARQUEE WRAPPER */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 25px;
+  position: relative;
+}
+
+/* TRACK */
+.marquee-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: marqueeFlow 40s linear infinite;
+}
+
+/* INFINITE SCROLL FIX */
+@keyframes marqueeFlow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
+}
+
+/* CARD */
+.batch-card {
+  min-width: 280px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+  transition: 0.25s ease;
+}
+
+.batch-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* Title */
+.bc-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: #00287A;
+  margin-bottom: 12px;
+}
+
+/* Row */
+.bc-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* Quote */
+.bc-quote {
+  margin-top: 14px;
+  font-size: 13px;
+  font-style: italic;
+  color: #e22027;
+  text-align: center;
+}

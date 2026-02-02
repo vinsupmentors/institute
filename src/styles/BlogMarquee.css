@@ -1,0 +1,31 @@
+/* src/styles/BlogMarquee.css */
+
+.marquee-viewport {
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+  padding: 10px 0;
+}
+
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.marquee-inner {
+  display: inline-flex;
+  gap: 40px;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.marquee-item {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #f3f4f6;
+  color: #111;
+  white-space: nowrap;
+}

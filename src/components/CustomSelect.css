@@ -1,0 +1,54 @@
+.cs-container {
+  position: relative;
+  width: 220px;
+  font-size: 15px;
+}
+
+.cs-selected {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cs-arrow {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.cs-dropdown {
+  position: absolute;
+  top: 46px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  z-index: 10;
+  max-height: 185px; /* ~5 items */
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.cs-item {
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.cs-item:hover {
+  background: #f3f4f6;
+}
+
+.cs-item.active {
+  background: #e0edff;
+  font-weight: 600;
+}
+
+.cs-empty {
+  text-align: center;
+  color: #888;
+  padding: 12px;
+}

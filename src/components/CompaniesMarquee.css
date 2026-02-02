@@ -1,0 +1,164 @@
+/* ===============================
+   COMPANIES MARQUEE – MODERN SAAS
+================================ */
+
+.companies-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 56px 0;
+  background: linear-gradient(180deg, #ffffff, #f1f5f9);
+}
+
+/* soft edge fade */
+.companies-marquee::before,
+.companies-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 140px;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.companies-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 20%, transparent);
+}
+
+.companies-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 20%, transparent);
+}
+
+/* ROW */
+.marquee-row {
+  overflow: hidden;
+  margin: 22px 0;
+}
+
+/* TRACK */
+.marquee-track {
+  display: flex;
+  gap: 28px;
+  width: fit-content;
+  will-change: transform;
+}
+
+/* Pause on hover */
+.companies-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* CARD – GLASS STYLE */
+.marquee-card {
+  flex-shrink: 0;
+  width: 180px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.marquee-card img {
+  max-width: 130px;
+  max-height: 56px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: all 0.35s ease;
+}
+
+/* Hover polish */
+.marquee-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+}
+
+.marquee-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+/* ANIMATIONS */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.scroll-left {
+  animation: marquee-left 36s linear infinite;
+}
+
+.scroll-right {
+  animation: marquee-right 42s linear infinite;
+}
+
+.scroll-left-slow {
+  animation: marquee-left 60s linear infinite;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .marquee-card {
+    width: 140px;
+    height: 76px;
+  }
+
+  .marquee-card img {
+    max-width: 95px;
+    max-height: 42px;
+  }
+}
+.marquee-track {
+  display: flex;
+  flex-wrap: nowrap;   /* 🔥 IMPORTANT */
+}
+.marquee-card {
+  flex-shrink: 0;      /* 🔥 CRITICAL */
+}
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  width: max-content;   /* NOT 100% */
+}
+.marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 28px;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee-card {
+  flex-shrink: 0;
+  width: 180px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

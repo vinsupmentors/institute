@@ -1,0 +1,17 @@
+/* BlogCard.css */
+.blog-card { background:#fff; border-radius:10px; overflow:hidden; border:1px solid #eee; display:flex; flex-direction:column; transition:transform .12s; position:relative; }
+.blog-card:hover { transform:translateY(-6px); box-shadow:0 10px 30px rgba(0,0,0,0.06); }
+.thumb-wrap { position:relative; overflow:hidden; }
+.card-thumb { width:100%; height:180px; object-fit:cover; display:block; border-bottom:1px solid #f0f0f0; }
+.card-thumb.placeholder { display:flex; align-items:center; justify-content:center; height:180px; background:#f4f4f4; color:#777; }
+.card-body { padding:12px; display:flex; flex-direction:column; gap:8px; }
+.card-title { font-size:16px; margin:0; font-weight:700; color:#111; }
+.card-meta { color:#777; font-size:13px; }
+.card-excerpt { font-size:14px; color:#333; min-height:44px; }
+.card-tags { margin-top:8px; display:flex; gap:6px; flex-wrap:wrap; }
+.tag { background:#eef2ff; color:#3b49d6; padding:4px 8px; border-radius:999px; font-size:12px; }
+.card-link { margin-top:8px; color:#2f6df6; text-decoration:none; font-weight:700; }
+
+/* hover popup */
+.hover-layer { position:absolute; top:-220px; left:10px; right:10px; width:calc(100% - 20px); z-index:40; pointer-events:none; }
+.hover-layer .hover-carousel { pointer-events:auto; }

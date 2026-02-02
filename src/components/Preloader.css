@@ -1,0 +1,15 @@
+.preloader-container {
+  position: fixed;
+  inset: 0;
+  background: rgb(120, 120, 120);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.preloader-image {
+  width: 275px;
+  height: 550px;
+  object-fit: contain;
+}

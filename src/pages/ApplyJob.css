@@ -1,0 +1,160 @@
+/* -----------------------------------------------------
+   APPLY PAGE WRAPPER
+----------------------------------------------------- */
+.apply-page {
+  max-width: 650px;
+  margin: 60px auto;
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  border: 1px solid #eee;
+}
+
+.apply-page h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: #7a003c;
+  text-align: center;
+}
+
+/* -----------------------------------------------------
+    FORM STYLING
+----------------------------------------------------- */
+.apply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.apply-form label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.apply-form input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: 0.2s ease;
+  background: #fafafa;
+}
+
+.apply-form input:focus {
+  border-color: #c62839;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(198,40,57,0.15);
+}
+
+/* -----------------------------------------------------
+    SUBMIT BUTTON
+----------------------------------------------------- */
+.apply-form button {
+  margin-top: 10px;
+  padding: 14px 0;
+  border-radius: 10px;
+  background: #c62839;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.apply-form button:hover {
+  background: #7a003c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.apply-form button:disabled {
+  background: #b5b5b5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* -----------------------------------------------------
+    MESSAGE SECTION
+----------------------------------------------------- */
+.apply-message {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Success message styling */
+.apply-message:contains("success") {
+  background: #e8f9e9;
+  color: #2e7d32;
+}
+
+/* Error message styling */
+.apply-message:not(:contains("success")) {
+  background: #feecec;
+  color: #d32f2f;
+}
+
+/* -----------------------------------------------------
+    RESPONSIVE DESIGN
+----------------------------------------------------- */
+@media (max-width: 768px) {
+  .apply-page {
+    padding: 30px 22px;
+    margin: 40px 15px;
+  }
+
+  .apply-page h2 {
+    font-size: 26px;
+  }
+
+  .apply-form input {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .apply-form button {
+    font-size: 16px;
+  }
+}
+/* MAKE SELECT LOOK EXACTLY LIKE INPUT */
+.apply-form select {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  background: #fafafa;
+  transition: 0.2s ease;
+  appearance: none;           /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+/* SELECT FOCUS */
+.apply-form select:focus {
+  border-color: #c62839;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(198,40,57,0.15);
+}
+/* CONFETTI ANIMATION */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  z-index: 9999;
+  transition: top 1.2s ease-out, opacity 1.2s ease-out;
+}

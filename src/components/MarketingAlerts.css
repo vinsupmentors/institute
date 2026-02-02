@@ -1,0 +1,112 @@
+/* ==================================================
+   MARKETING ALERTS – PREMIUM CENTERED TICKER
+   Brand: Vinsup Skill Academy
+================================================== */
+
+.marketing-alerts {
+  max-width: 1100px;
+  margin: 18px auto;            /* perfect centering */
+  padding: 14px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;      /* 👈 CENTER AS A GROUP */
+  gap: 18px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 40, 122, 0.06),
+    rgba(0, 40, 122, 0.03)
+  );
+
+  border: 1px solid rgba(0, 40, 122, 0.18);
+  border-radius: 18px;
+
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+
+  box-shadow:
+    0 6px 20px rgba(0, 40, 122, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* =========================
+   LIVE DOT
+========================= */
+.ma-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--secondary);
+  animation: pulse 1.4s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1);   opacity: 0.5; }
+  50%  { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1);   opacity: 0.5; }
+}
+
+/* =========================
+   LABEL
+========================= */
+.ma-label {
+  font-weight: 700;
+  color: var(--secondary);
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* =========================
+   MESSAGE TEXT
+========================= */
+.ma-text {
+  font-weight: 500;
+  color: var(--text);
+  text-align: center;           /* 👈 CENTER TEXT */
+  white-space: nowrap;
+  animation: fadeSlide 0.4s ease;
+}
+
+/* smooth message change */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   HOVER POLISH
+========================= */
+.marketing-alerts:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 40, 122, 0.09),
+    rgba(0, 40, 122, 0.05)
+  );
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 768px) {
+  .marketing-alerts {
+    margin: 12px 12px;
+    padding: 12px 16px;
+    font-size: 14px;
+    border-radius: 14px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .ma-text {
+    white-space: normal;
+  }
+}
