@@ -46,6 +46,28 @@ button{ cursor: pointer; }
   padding: 14px 28px;
   display: flex; align-items: center; justify-content: space-between;
 }
+body :not(input):not(textarea) {
+  user-select: none;
+}
+/* ===============================
+   BACKLINK – DISABLE POINTER UI
+================================ */
+
+a.backlink {
+  cursor: default;              /* ⛔ no hand pointer */
+  text-decoration: none;        /* remove underline */
+  color: inherit;               /* same as text */
+}
+
+/* On hover */
+a.backlink:hover,
+a.backlink:focus {
+  cursor: default;
+  text-decoration: none;
+  color: inherit;
+}
+
+
 .brand{ margin-right: 24px; }
 .brand img {
   display: block;

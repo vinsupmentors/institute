@@ -1,15 +1,84 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Basic -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>institute-site</title>
+
+    <title>Vinsup Skill Academy | Career-Focused Tech Training</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Vinsup Skill Academy offers industry-focused training in Data Analytics, Power BI, Full Stack Development, and career-ready programs."
+    />
+    <meta
+      name="keywords"
+      content="Vinsup Skill Academy, Data Analytics course, Power BI training, Full Stack development, tech institute Chennai"
+    />
+    <meta name="author" content="Vinsup Skill Academy" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (Social Sharing) -->
+    <meta property="og:title" content="Vinsup Skill Academy" />
+    <meta
+      property="og:description"
+      content="Industry-ready tech courses with placement support and expert mentorship."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vinsup.com" />
+    <meta property="og:image" content="https://vinsup.com/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vinsup Skill Academy" />
+    <meta
+      name="twitter:description"
+      content="Career-focused tech training with real-world projects."
+    />
+    <meta name="twitter:image" content="https://vinsup.com/og-image.png" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P8XLGSBW");
+      document.addEventListener("contextmenu", e => e.preventDefault());
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
+
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P8XLGSBW"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="root"></div>
+
+    <!-- React Entry -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

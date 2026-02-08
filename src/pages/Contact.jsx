@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import QuickEnquiry from "../components/QuickEnquiry";
 import "./Contact.css";
 
 export default function Contact() {
@@ -34,7 +35,7 @@ export default function Contact() {
           GET IN TOUCH SECTION
       ============================ */}
       <section className="section contact-details">
-        <h2 className="section-title contact-title-center">Get in Touch</h2>
+       
         <div className="section-inner contact-grid">
           {/* LEFT SIDE */}
           <div className="contact-left">
@@ -145,22 +146,17 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
-      {/* ===========================
-          SOCIAL MEDIA
-      ============================ */}
-      <section className="section social-section">
+ {/* =================================================
+          SECTION 8 — Quick Enquiry CTA
+      ================================================= */}
+      <section className="ql">
         <div className="section-inner">
-          <h2 className="section-title">Follow Us - Social Media</h2>
-
-          <div className="social-icons">
-            <a className="social-icon" href="#"><img src="/src/assets/icons/linkedin.png" /></a>
-            <a className="social-icon" href="#"><img src="/src/assets/icons/instagram.png" /></a>
-            <a className="social-icon" href="#"><img src="/src/assets/icons/facebook.png" /></a>
-            <a className="social-icon" href="#"><img src="/src/assets/icons/youtube.png" /></a>
-          </div>
+          <h2 className="section-title">Quick Enquiry</h2>
+          <QuickEnquiry />
         </div>
       </section>
+      
+
 
       
     </main>

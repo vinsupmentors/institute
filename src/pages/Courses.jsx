@@ -40,6 +40,30 @@ const courseFAQs = [
   {
     q: "Can I attend a demo class?",
     a: "Absolutely. You can book a free demo session before enrolling."
+  },
+  {
+    q: "Which Coimbatore IT training institute is the least expensive? ",
+    a: "In Coimbatore, students looking for low-cost training options should select Vinsup Skill Academy. This IT training provider has multiple professional programmes available for a flat fee of ₹14,999. This flat fee model is completely ransparent and includes full technical training, a professional certificate, and real-world project experience, ensuring that all graduates receive quality education at an affordable price."
+  },
+  {
+    q: "Can you take Full Stack Development or Data Analytics courses if you are not an IT graduate?",
+    a: "Yes! Students from all different types of educational backgrounds are able to transition into the technology field hrough structured learning paths. The No-Code to Full-Code pathway is how we create the logic from no logical progression. Because of this pathway, non-technical graduates can successfully master Full Stack Development and Data Analytics."
+  },
+  {
+    q: "What is the job readiness programme comprised of 100 hours? ",
+    a: "A job readiness programme consisting of 100 hours is designed to rapidly support students in moving from their college experience into the world of work. At Vinsup, the job readiness programme is designed around high-impact skills, project work, and preparation for MNC recruitment drives (TCS Code Vita and Zoho), which provide students with the confidence and preparation necessary to successfully participate in interviews with multinational companies in a shortened time frame."
+  },
+  {
+    q: "What kind of placement support does Vinsup Skill Academy provide? ",
+    a: "Vinsup Skill Academy offers students employment readiness through its extensive placement support that provides students the help they need in order to succeed in the job market. Included in the Employment Readiness Program is access to our dedicated Placement Cell for career development activities. Mock Interviews Sessions – These sessions allow students to practice interviewing and increase their confidence prior to going into an interview. Resume and LinkedIn Branding – Students will have their own profiles created on LinkedIn and will receive guidance on how to make their resumes both appeal to recruiters. Aptitude and Soft Skills Training – This type of preparation is vital for International companies when hiring employees through the first stages of hiring processes. "
+  },
+  {
+    q: " Where can I get an internship certificate in Coimbatore for final year projects?",
+    a: "Students can obtain an internship certificate in Coimbatore for their final year projects through the internship-linked training offered by Vinsup Skill Academy. While completing the internship-linked training, students will have the ability to work on live projects and upon successful completion of the internship-linked program, will be awarded a Certificate of Completion that will assure their level of practical experience and meet the requirements to complete their final year project. "
+  },
+  {
+    q: "  Does Vinsup Skill Academy offer online classes for IT courses? ",
+    a: "For students who cannot attend classes on the Ganapathy Campus, Vinsup Skill Academy offers options for both online and hybrid learning for all courses. Students who choose to attend classes via an Online or Hybrid option will receive all the same course material, Certification and Internship benefits as those who attend classes onsite at the Ganapathy Campus. Students will be able to learn in a comfortable and convenient manner about Full Stack Development, Data Analytics and Digital Marketing for the same price of ₹19999from the comfort of their homes. "
   }
 ];
 
@@ -155,8 +179,11 @@ export default function Courses() {
       {/* =========================
           UPCOMING BATCHES
       ========================== */}
-      <UpcomingBatches />
-
+      <section className="courses-upcoming-batches">
+        <div className="do5">
+       <UpcomingBatches />
+       </div>
+        </section>
       <section className="courses-faq">
   <div className="container">
     <h2 className="section-title">Frequently Asked Questions</h2>

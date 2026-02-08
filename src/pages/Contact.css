@@ -105,14 +105,51 @@
      SOCIAL MEDIA ICONS SECTION
 ----------------------------------------------------- */
 .social-section {
-  margin-top: 80px;
+  margin-top: 0px;
+}
+.contact-sub{
+  text-align: center;
+}
+/* SOCIAL MEDIA ICONS SECTION */
+.social-section {
+  padding-top: 30px;
 }
 
+.social-section {
+  outline: 3px solid red;
+}
+
+.social-icons {
+  outline: 3px solid blue;
+  background: rgba(0, 0, 255, 0.1);
+  min-height: 100px;
+}
+/* 🔥 FORCE FIX — SOCIAL SECTION */
+.social-section {
+  height: auto !important;
+  min-height: unset !important;
+  display: block !important;
+}
+
+.social-section .section-inner {
+  height: auto !important;
+}
+
+/* ensure icons container can grow */
+.social-icons {
+  display: flex !important;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+  height: auto !important;
+}
+  
 .social-icons {
   display: flex;
   gap: 25px;
   justify-content: center;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .social-icon {
@@ -125,8 +162,8 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
-  transition: 0.25s ease;
 }
+
 
 .social-icon img {
   width: 32px;

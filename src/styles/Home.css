@@ -134,7 +134,7 @@ header,
 ================================ */
 /* example */
 .about-section {
-  margin-top: -80px;
+  margin-top: -50px;
   padding: 40px 0;
   background: var(--white);
 }
@@ -184,7 +184,7 @@ header,
 }
 
 .hero-media img {
-  max-width: 550px;
+  max-width: 850px;
   width: 100%;
   height: auto;
 }
@@ -239,8 +239,9 @@ header,
   }
 
   .hero-media img {
-    max-width: 220px;
+    max-width: 500px;
     margin-bottom: 20px;
+  
   }
 
   .hero-copy h1 {
@@ -259,7 +260,6 @@ header,
 .section-title,
 .about-title,
 .why-title,
-h2,
 h3 {
   color: #0b3aa4; /* professional blue */
 }
@@ -716,7 +716,7 @@ section.key-highlights .kh-label {
 .logo-track {
   display: flex;
   width: max-content;
-  animation: logoScroll 30s linear infinite;
+  animation: logoScroll 250s linear infinite;
 }
 
 /* Reverse direction */
@@ -739,7 +739,7 @@ section.key-highlights .kh-label {
   max-width: 120px;
   max-height: 60px;
   object-fit: contain;
-  filter: grayscale(100%);
+  
   opacity: 0.75;
   transition: all 0.3s ease;
 }
@@ -782,7 +782,7 @@ section.key-highlights .kh-label {
 .jrp-3col {
   padding: 30px 0;
   background: #ffffff;
-  margin-top: -150px;
+  margin-top: 0px;
 }
 
 .jrp-3col > h2,
@@ -867,7 +867,7 @@ section.key-highlights .kh-label {
 }
 
 .jrp-middle li {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 10px;
   color: #374151;
@@ -1085,5 +1085,66 @@ section .section-inner .section-title {
 }
 
 .qc {
-  margin-top: -150px;
+  margin-top: -10px;
+}
+/* Container holding the video */
+.featured-testimonial {
+  width: 100%;
+}
+
+.featured-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.featured-video
+{
+  width: 300px;
+  height: 300px;
+ 
+}
+
+.featured-video iframe{
+  width: 300px;
+  height: 300px;
+}
+/* Container for the 400x400 carousel */
+/* Update these styles in your Home.css */
+/* The container representing the white box */
+.hero-media .hero-image-carousel {
+  width: 550px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #fff; /* The white box background */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ccc;
+}
+
+/* The images inside the box */
+.carousel-img {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 550px;  /* Fills full width of the box */
+  height: 450px; /* Fills full height of the box */
+  object-fit: cover; /* Crucial: crops image to fill the square */
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.carousel-img.active {
+  opacity: 1;
+}
+
+/* Mobile Responsiveness: Ensures the box stays square on small screens */
+@media (max-width: 768px) {
+  .hero-media .hero-image-carousel {
+    width: 100%;
+    max-width: 350px;
+    height: 285px;
+    margin: 0 auto 2rem;
+  }
 }

@@ -18,7 +18,7 @@ import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import CourseDetails from "./pages/CourseDetails.jsx";
 import Careers from "./pages/Careers.jsx";
-
+import SocialExpand from "./components/SocialExpand.jsx";
 
 
 
@@ -57,7 +57,7 @@ export default function App() {
       {loading && <Loader />}
       <ScrollToTop />
       <Navbar />
-
+      <SocialExpand />    
       <main className="page-wrapper">
         <Routes>
 

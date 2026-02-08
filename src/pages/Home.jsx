@@ -5,6 +5,11 @@ import ReviewsShowcase from "../components/ReviewsShowcase";
 import QuickEnquiry from "../components/QuickEnquiry";
 import Popup from "../components/Popup";
 import '../styles/Home.css'
+import img1 from "../assets/IMG_0044.JPG";
+import img2 from "../assets/IMG_0044.JPG";
+import whoarewe from '../assets/courses/who are we.png'
+const API_URL =
+  "https://script.google.com/macros/s/AKfycbxl_6f8kPi0cMxa3XwE_FUhZMbUG6KolMIAFvSQb7PAgTXgSO1WB3Pv7eyyAw1NIZKN5w/exec";
 
 // import "../styles/Home.css";
 // import "../styles/Courses.css";
@@ -14,6 +19,16 @@ import '../styles/Home.css'
 
 /* ===== Why Choose Us (9 cards) ===== */
 /* Unique inline SVG icons per card */
+
+const carouselImages = [
+  
+  "/src/assets/welcome/image1.png",
+  "/src/assets/welcome/image2.png",
+  "/src/assets/welcome/image3.png",
+  "/src/assets/welcome/image4.png",
+  "/src/assets/welcome/image5.png",
+  "/src/assets/welcome/image6.png"
+]
 const WhyIcon = ({ k }) => {
   const common = { width: 28, height: 28, fill: "none", stroke: "currentColor", strokeWidth: 2 };
   switch (k) {
@@ -44,7 +59,17 @@ const WHY_CARDS = [
 ];
 
 /* ===== Company Logos (25) ===== */
-const COMPANY_LOGOS = Array.from({ length: 25 }, (_, i) => `/src/assets/companies/${i + 1}.png`);
+
+// ✅ Auto-import all company logos (png + jpg + jpeg)
+const companyImages = import.meta.glob(
+  "../assets/companies/*.{png,jpg,jpeg}",
+  { eager: true }
+);
+
+// Convert to usable array
+const COMPANY_LOGOS = Object.values(companyImages).map(
+  (mod) => mod.default
+);
 
 const jrpSteps = [
   {
@@ -189,7 +214,7 @@ const steps = [
 "Career roadmap guidance for growth",
 "Continuous skill upgrade based on industry trends"
     ],
-    image: "/src/assets/jrp/step1.jpg"
+    image: "/src/assets/jrp/IMG_6329.PNG"
   },
   {
     title: "Regular Worksheets & Practical Learning",
@@ -212,7 +237,7 @@ const steps = [
 
 "Monthly skill evaluation tests"
     ],
-    image: "/src/assets/jrp/step2.jpg"
+    image: "/src/assets/jrp/Practical training.png"
   },
   {
     title: "Resume & Portfolio Building",
@@ -235,7 +260,7 @@ const steps = [
 
 "Linking portfolio and LinkedIn to resume for professional identity"
     ],
-    image: "/src/assets/jrp/step3.jpg"
+    image: "/src/assets/jrp/Portfolio building.png"
   },
   {
     title: "Soft Skill & Aptitude Training",
@@ -250,7 +275,7 @@ const steps = [
 "Confidence-building and interview body language training",
 "Group discussions and team communication activities"
     ],
-    image: "/src/assets/jrp/step4.jpg"
+    image: "/src/assets/jrp/Soft skill .png"
   },
   {
     title: "Internship Experience",
@@ -265,7 +290,7 @@ const steps = [
 "Weekly review and performance-based guidance",
 "Certificate and experience letter for resume and portfolio"
     ],
-    image: "/src/assets/jrp/step5.jpg"
+    image: "/src/assets/jrp/Practical training.png"
   },
   {
     title: "Mock Interviews",
@@ -280,7 +305,7 @@ const steps = [
 "Panel and one-on-one interview practice",
 "Building confidence and interview presence"
     ],
-    image: "/src/assets/jrp/step6.jpg"
+    image: "/src/assets/jrp/Mock interview.png"
   },
   {
     title: "Placement Assistance",
@@ -295,90 +320,27 @@ const steps = [
 "Support in offer negotiation and joining process",
 "Continuous assistance until placement confirmation"
     ],
-    image: "/src/assets/jrp/step7.jpg"
+    image: "/src/assets/jrp/Placement Assistance.png"
   }
 ];
 
   /* ====== HERO CAROUSEL (top) ====== */
   const images = [
-    "/src/assets/1.png",
-    "/src/assets/2.png",
-    "/src/assets/3.png",
-    "/src/assets/4.png",
-    "/src/assets/5.png",
-    "/src/assets/6.png"
-  ];
-
-const SAMPLE_REVIEWS = [
-  {
-    name: "Prakalya Gayathri",
-    rating: 5,
-    text: "Really worth for investing time  ,to gain ur knowledge  within short time  our learning towards course is very high , I love the  class structure and environment ❣️",
-    photo: "/src/assets/reviews/priya.jpg"
-  },
-  {
-    name: "Soundarya",
-    rating: 4,
-    text: "I choose Vinsup Academy because they provide clear and genuine counselling. The classes are well-structured and taught in an easy to understand way. I enrolled in the Data Analytics course, and I’m really happy with my decision. The academy offers high-quality training at a very affordable price, which is hard to find elsewhere. Overall, it's a great place to start your IT career😃.",
-    photo: "/src/assets/reviews/rahul.png"
-  },
-  {
-    name: "Harish",
-    rating: 4,
-    text: "I'm Harish student of Vinsup skill academy. Here the way of teaching and practicing is so good. And here we can easily develop our skills in the short period of time. And the teaching cost is affordable here. Thanking you.",
-    photo: "/src/assets/reviews/divya.jpeg"
-  },
-   {
-    name: "Meera R",
-    rating: 5,
-    text: "I am Meera R,Had a great learning experience at Vinsup! The classes were clear, and the support from mentors was amazing.Really helped me boost my confidence in coding and tech skills. Loved the interactive sessions and project-based learning. Great for beginners and career switchers",
-    photo: "/src/assets/reviews/divya.jpeg"
-  },
-   {
-    name: "Vaasu",
-    rating: 5,
-    text: "I'm digital marketing student of Vinsup Skill Academy. I learned Digital Marketing here excellent teaching and practical training helped me improve my skills quickly at an affordable cost. Thanking you...!!",
-    photo: "/src/assets/reviews/divya.jpeg"
-  },
-  {
-    name: "Jeyasneka",
-    rating: 5,
-    text: "I'm Jeyasneka, a student who studied at Vinsup Skill Academy. Learning Digital Marketing here was a great experience. The Tutor's friendly approach and clear teaching helped me improve my skills in a short period and that too at a low cost. Thanking you...!!",photo: "/src/assets/reviews/divya.jpeg"
-  },
-  {
-    name: "Sam Jeffry",
-    rating: 5,
-    text: "I would highly recommend this institution to anyone looking for a high-quality, supportive, and forward-thinking environment to learn and grow.The instructor are very friendly and delivering lessons in a way that is  engaging, clear, and easy to understand.",
-    photo: "/src/assets/reviews/divya.jpeg"
-  },
-  {
-    name: "Niranjan",
-    rating: 5,
-    text: "I'm Niranjan, a student who studied at Vinsup Skill Academy. Learning Front-end here was a great experience. The Tutor's friendly approach and clear teaching helped me improve my skills in a short period and that too at a low cost. Thanking you...",
-    photo: "/src/assets/reviews/divya.jpeg"
-  },{
-    name: "Dharani",
-    rating: 5,
-    text: "I'm D.Dharani , a student who studied in vinsup   skill academy.Learning Front-end here I truly appreciate the dedication and clarity with which the subject was taught. The tutor made complex topics easy to understand through real-life examples, interactive sessions, and a supportive learning environment. Their passion for teaching and genuine care for students' progress really stood out. A great learning experience overall!....",
-    photo: "/src/assets/reviews/divya.jpeg"
-  },{
-    name: "Gowrikarthi",
-    rating: 5,
-    text: "I'm D.Dharani , a student who studied in vinsup   skill academy.Learning Front-end here I truly appreciate the dedication and clarity with which the subject was taught. The tutor made complex topics easy to understand through real-life examples, interactive sessions, and a supportive learning environment. Their passion for teaching and genuine care for students' progress really stood out. A great learning experience overall!....",
-    photo: "/src/assets/reviews/divya.jpeg"
-  },{
-    name: "Dharani",
-    rating: 5,
-    text: "I'm D.Dharani , a student who studied in vinsup   skill academy.Learning Front-end here I truly appreciate the dedication and clarity with which the subject was taught. The tutor made complex topics easy to understand through real-life examples, interactive sessions, and a supportive learning environment. Their passion for teaching and genuine care for students' progress really stood out. A great learning experience overall!....",
-    photo: "/src/assets/reviews/divya.jpeg"
-  },{
-    name: "Dharani",
-    rating: 5,
-    text: "I'm D.Dharani , a student who studied in vinsup   skill academy.Learning Front-end here I truly appreciate the dedication and clarity with which the subject was taught. The tutor made complex topics easy to understand through real-life examples, interactive sessions, and a supportive learning environment. Their passion for teaching and genuine care for students' progress really stood out. A great learning experience overall!....",
-    photo: "/src/assets/reviews/divya.jpeg"
-  }
-  // ...continue until you complete 18 reviews
+  { src: "/src/assets/da.png", link: "/courses/data-analytics" },
+  { src: "/src/assets/dm.png", link: "/courses/digital-marketing" },
+  { src: "/src/assets/dvp.png", link: "/courses/data-verse-pro" },
+  { src: "/src/assets/dvs.png", link: "/courses/devstack-fullstack-devops" },
+  { src: "/src/assets/ux.png", link: "/courses/ui-ux-design" },
+  { src: "/src/assets/fsd.png", link: "/courses/frontend" }
 ];
+
+useEffect(() => {
+  if (!images.length) return;
+  const id = setInterval(() => {
+    setIndex((prev) => (prev + 1) % images.length);
+  }, 3000); // Changed to 3 seconds
+  return () => clearInterval(id);
+}, [images.length]);
 
 
   const [index, setIndex] = useState(0);
@@ -386,45 +348,77 @@ const SAMPLE_REVIEWS = [
 // const [activeStep, setActiveStep] = useState(jrpSteps[0].key);
 // const activeItem = jrpSteps.find(s => s.key === activeStep) ?? jrpSteps[0];
 
+ useEffect(() => {
+    fetch(API_URL)
+      .then(res => res.json())
+      .then(data => {
+        // HERO YOUTUBE (supports 1 or more)
+        if (data.youtube) {
+          setYoutubeVideos(
+            Array.isArray(data.youtube) ? data.youtube : [data.youtube]
+          );
+        }
+
+        // INSTAGRAM (grouped by category)
+        setInstagram(data.instagram || {});
+
+        // TEXT TESTIMONIALS
+        setTextTestimonials(data.text || []);
+      })
+      .catch(err => console.error("Testimonials API error:", err));
+  }, []);
 
 
   useEffect(() => {
     if (!images.length) return;
     const id = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 2000); // 2 seconds
+    }, 5000); // 2 seconds
     return () => clearInterval(id);
   }, [images.length]);
-
+const [youtubeVideos, setYoutubeVideos] = useState([]);
   return (
     <main>
         <Popup />
       {/* 1) FULL-WIDTH HERO CAROUSEL (450px) */}
-      <section className="hero-carousel" aria-label="Homepage banner">
-        {images.map((src, i) => (
-          <div
-            key={i}
-            className="hero-slide"
-            style={{ opacity: i === index ? 1 : 0 }}
-            aria-hidden={i !== index}
-          >
-            <img src={src} alt="" />
-          </div>
-        ))}
-      </section>
+     <section className="hero-carousel" aria-label="Homepage banner">
+  {images.map((item, i) => (
+    <div
+      key={i}
+      className="hero-slide"
+      style={{
+        opacity: i === index ? 1 : 0,
+        pointerEvents: i === index ? "auto" : "none"
+      }}
+      aria-hidden={i !== index}
+    >
+      <Link to={item.link}>
+        <img src={item.src} alt={`Slide ${i + 1}`} />
+      </Link>
+    </div>
+  ))}
+</section>
+
 
       {/* 2) HERO (Tagline + description + CTAs + Image) */}
       <section className="hero-split" aria-label="Introduction and actions">
         {/* <h2 className="section-title">VINSUP SKILL </h2> */}
 
         <div className="hero-split-inner">
-            <div className="hero-media">
-            {/* Replace hero.jpg with your chosen photo (1920x450 recommended) */}
-            <img
-              src="/src/assets/logo.png"
-              alt="Vinsup Skill Academy"
-            />
-          </div>
+            {/* Updated Hero Media Section */}
+<div className="hero-media">
+  <div className="hero-image-carousel">
+    {carouselImages.map((src, i) => (
+      <img
+        key={i}
+        src={src}
+        alt={`Slide ${i}`}
+        className={`carousel-img ${i === index ? "active" : ""}`}
+      />
+    ))}
+  </div>
+</div>
+
           <div className="hero-copy">
            
             <h1>Welcome to Vinsup skill academy</h1>
@@ -443,7 +437,7 @@ const SAMPLE_REVIEWS = [
 {/* SECTION 2 — Key Highlights */}
 <section className="key-highlights section section--full" id="highlights">
   <div className="section-inner">
-    <h2 className="section-title">We are Proud of...</h2>
+    <h2 id="h2" className="section-title" >We are Proud of...</h2>
 
     <div className="kh-grid">
       <div className="kh-item">
@@ -485,7 +479,7 @@ const SAMPLE_REVIEWS = [
 
       <div className="about-image">
       <div className="image-placeholder">
-        Image will appear here
+       <img src={whoarewe} alt="" />
       </div>
 </div>
 
@@ -548,38 +542,55 @@ const SAMPLE_REVIEWS = [
 
 
 {/* SECTION — Can Place in Multiple Companies */}
-<section className="partners section section--full" aria-label="Hiring Partners">
+<section
+  className="partners section section--full"
+  aria-label="Hiring Partners"
+>
   <div className="section-inner">
-    <h2 className="section-title">Can Place in Multiple Companies</h2>
+    <h2 className="section-title">
+      Start your career in Multiple Companies
+    </h2>
 
-    {/* Row 1 — LTR */}
-    <div className="logo-row ltr" aria-label="Companies row 1">
+    {/* Row 1 — Left to Right */}
+    <div className="logo-row ltr">
       <div className="logo-track">
         {[...COMPANY_LOGOS, ...COMPANY_LOGOS].map((src, i) => (
-          <div className="logo-cell" key={`r1-${i}`}>
-            <img src={src} alt={`Company ${((i % COMPANY_LOGOS.length) + 1)}`} />
+          <div className="logo-cell" key={`ltr-${i}`}>
+            <img
+              src={src}
+              alt={`Hiring partner ${i + 1}`}
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
     </div>
 
-    {/* Row 2 — RTL */}
-    <div className="logo-row rtl" aria-label="Companies row 2">
+    {/* Row 2 — Right to Left */}
+    <div className="logo-row rtl">
       <div className="logo-track">
         {[...COMPANY_LOGOS, ...COMPANY_LOGOS].map((src, i) => (
-          <div className="logo-cell" key={`r2-${i}`}>
-            <img src={src} alt={`Company ${((i % COMPANY_LOGOS.length) + 1)}`} />
+          <div className="logo-cell" key={`rtl-${i}`}>
+            <img
+              src={src}
+              alt={`Hiring partner ${i + 1}`}
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
     </div>
 
-    {/* Row 3 — LTR */}
-    <div className="logo-row ltr" aria-label="Companies row 3">
+    {/* Row 3 — Left to Right */}
+    <div className="logo-row ltr">
       <div className="logo-track">
         {[...COMPANY_LOGOS, ...COMPANY_LOGOS].map((src, i) => (
-          <div className="logo-cell" key={`r3-${i}`}>
-            <img src={src} alt={`Company ${((i % COMPANY_LOGOS.length) + 1)}`} />
+          <div className="logo-cell" key={`ltr2-${i}`}>
+            <img
+              src={src}
+              alt={`Hiring partner ${i + 1}`}
+              loading="lazy"
+            />
           </div>
         ))}
       </div>

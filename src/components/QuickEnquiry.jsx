@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./QuickEnquiry.css";
 
 
+export default function QuickEnquiry({ onSuccess }) {
 
-export default function QuickEnquiry() {
+
   const submitUrl = "http://localhost:3000/api/proxy"; 
   const secret = "vinsup_2025_secure_key";
 
@@ -53,52 +54,67 @@ export default function QuickEnquiry() {
   }
 
   async function handleSubmit(e) {
-    e.preventDefault();
-    const err = validate();
-    setErrors(err);
-    if (Object.keys(err).length) return;
+  e.preventDefault();
 
-    setLoading(true);
-    setStatus({ type: "", text: "" });
+  // 1️⃣ Frontend validation
+  const err = validate();
+  setErrors(err);
+  if (Object.keys(err).length) return;
+
+  setLoading(true);
+  setStatus({ type: "", text: "" });
+
+  try {
+    // 2️⃣ API call
+    const resp = await fetch(submitUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...form, secret }),
+    });
+
+    const rawText = await resp.text();
+    let json = null;
 
     try {
-      const resp = await fetch(submitUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, secret }),
-      });
-
-      const rawText = await resp.text();
-      let json = null;
-      try {
-        json = JSON.parse(rawText);
-      } catch {}
-
-      if (!resp.ok) {
-        throw new Error(json?.message || rawText || resp.statusText);
-      }
-
-      // Reset
-      setForm({
-        name: "",
-        email: "",
-        phone: "",
-        course: courses[0],
-        // mode: "Online",
-        message: "",
-      });
-
-      setErrors({});
-      setShowThanks(true);
-      setStatus({ type: "success", text: "Sent successfully!" });
-
-      setTimeout(() => setShowThanks(false), 5000);
-    } catch (err) {
-      setStatus({ type: "error", text: "Failed: " + err.message });
-    } finally {
-      setLoading(false);
+      json = JSON.parse(rawText);
+    } catch {
+      // non-JSON response fallback
     }
+
+    if (!resp.ok) {
+      throw new Error(json?.message || rawText || resp.statusText);
+    }
+
+    // 3️⃣ SUCCESS — reset form
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      course: courses[0],
+      message: "",
+    });
+
+    setErrors({});
+    setShowThanks(true);
+    setStatus({ type: "success", text: "Sent successfully!" });
+
+    // 4️⃣ 🔔 Notify parent ONLY if callback exists
+    if (onSuccess && typeof onSuccess === "function") {
+      onSuccess();
+    }
+
+    // 5️⃣ Auto-close thank-you modal
+    setTimeout(() => setShowThanks(false), 5000);
+
+  } catch (err) {
+    // 6️⃣ Error handling
+    setStatus({ type: "error", text: "Failed: " + err.message });
+  } finally {
+    // 7️⃣ Cleanup
+    setLoading(false);
   }
+}
+
 
   return (
     <>

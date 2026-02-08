@@ -42,7 +42,7 @@ export default function About() {
 
           {/* Left - Text */}
           <div className="about-hero-content">
-            <h2>The Preeminent Institute for IT Training in Coimbatore </h2>
+            <h2>The Pre-eminent Institute for IT Training in Coimbatore </h2>
             <p className="hero-lead">
              The Vinsup Skill Academy in Ganapathy Coimbatore offers more than simply a means of achieving certification; it provides an entire ecosystem for professional skill development. Whilst many institutions will only teach you content applicable to your specific subject area, here we prepare learners to be successful by providing them with industry-specific training that prepares them for the real world. Our model of education focuses heavily on outcomes; however, we believe that there should be an underlying philosophy behind our approach. Therefore when we deliver practical training it is always delivered by experienced mentors who understand and have experienced their own successes within these industries.
             </p>
@@ -59,7 +59,7 @@ export default function About() {
               src="/src/assets/about/hero.jpg"
               alt="About Vinsup Skill Academy"
             /> */}
-            <img src="https://img.freepik.com/free-photo/sunset-snow-capped-mountains_23-2152014205.jpg?semt=ais_hybrid&w=740&q=80" alt="" />
+            <img src="/src/assets/vinsup_building.png" alt="vinsupskillacademy" />
           </div>
 
         </div>
@@ -98,7 +98,7 @@ export default function About() {
     {/* Story Image */}
     <div className="story-media">
       <img
-        src="https://rukminim2.flixcart.com/image/480/480/k612pow0/poster/d/h/z/medium-tom-and-jerry-cartoon-poster-high-resolution-p41915-original-imafzh3zzcymbyzk.jpeg?q=90"
+        src="src/assets/growth.png"
         alt="Our Story"
       />
     </div>
@@ -158,8 +158,9 @@ export default function About() {
             <article className="wc-card">
               <h3 className="wc-title">Industry-Relevant Curriculum</h3>
               <p className="wc-text">
-            Vinsup Skill Academy continuously updates all of its training modules to ensure that you develop the necessary 100-hour job readiness skills that employers today seek. We offer courses on full stack development, data analytics using AI technology, digital marketing, and UI/UX design, among others.
+            Vinsup Skill Academy continuously updates all of its training modules to ensure that you develop the necessary 100-hour job readiness skills that employers today seek. 
               </p>
+              {/* We offer courses on full stack development, data analytics using AI technology, digital marketing, and UI/UX design, among others. */}
             </article>
 
             <article className="wc-card">
@@ -181,51 +182,35 @@ export default function About() {
 
 
 {/* =================================================
-    SECTION — Leadership Team (2 per row)
+    SECTION — Group of Companies
 ================================================= */}
-<section className="why-choose section" aria-label="Leadership Team">
+<section className="group-section" aria-label="Group of Companies">
   <div className="section-inner">
 
-    <h2 className="section-title">Leadership Team</h2>
+    <h2 className="section-title">Our Group of Companies</h2>
 
-    <div className="team-grid-2">
+    <div className="group-grid">
 
-      {/* Team Member 1 */}
-      <div className="team-card">
-        <div className="team-photo">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf1fiSQO7JfDw0uv1Ae_Ye-Bo9nhGNg27dwg&s" alt="Founder" />
-        </div>
-        <h3 className="team-name">Founder Name</h3>
-        <p className="team-role">Founder & CEO</p>
-        <p className="team-exp">12+ Years Experience</p>
+      <div className="group-card">
+        <img src="/src/assets/VINSUP INFOTECH.png" alt="Company 1" />
       </div>
 
-      {/* Team Member 2 */}
-      <div className="team-card">
-        <div className="team-photo">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf1fiSQO7JfDw0uv1Ae_Ye-Bo9nhGNg27dwg&s" alt="Co-Founder" />
-        </div>
-        <h3 className="team-name">Co-Founder Name</h3>
-        <p className="team-role">Co-Founder</p>
-        <p className="team-exp">10+ Years Experience</p>
+      <div className="group-card">
+        <img src="/src/assets/SRB BANKERS.png" alt="Company 2" />
       </div>
 
-      {/* Team Member 3 */}
-      <div className="team-card">
-        <div className="team-photo">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf1fiSQO7JfDw0uv1Ae_Ye-Bo9nhGNg27dwg&s" alt="Training Lead" />
-        </div>
-        <h3 className="team-name">Training Lead</h3>
-        <p className="team-role">Senior Instructor</p>
-        <p className="team-exp">8+ Years Experience</p>
+      <div className="group-card">
+        <img src="/src/assets/VINOLYA.png" alt="Company 3" />
       </div>
 
-     
+      <div className="group-card">
+        <img src="/src/assets/ramtel.png" alt="Company 4" />
+      </div>
 
     </div>
+
   </div>
 </section>
-
 
 
      {/* ===========================

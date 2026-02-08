@@ -40,6 +40,7 @@ export default function CourseTemplate({
   trustImageAlt,
    learners,     
   outcome,
+  highlights = [],
   short,
   duration,
   hours,
@@ -78,8 +79,20 @@ export default function CourseTemplate({
     desc: "Organize your learning with expert guidance."
   }
 ]
+
+const HIGHLIGHT_ICONS = {
+  clock: <FaClock />,
+  calendar: <FaCalendarAlt />,
+  ai: <FaRobot />,
+  offline: <FaBuilding />,
+  projects: <FaRocket />,
+  target: <FaBullseye />,
+  mentor: <FaHandshake />,
+  tech: <FaBrain />
+};
+
 const [openIndex, setOpenIndex] = useState(null);
-const COMPANY_LOGOS = Array.from({ length: 25 }, (_, i) => `/src/assets/companies/${i + 1}.png`);
+
   const toggle = (i) => {
     setOpenIndex(openIndex === i ? null : i);
   };
@@ -87,6 +100,15 @@ const COMPANY_LOGOS = Array.from({ length: 25 }, (_, i) => `/src/assets/companie
   const [activeModule, setActiveModule] = useState(0);
 const ref = useRef(null);
 
+const companyImages = import.meta.glob(
+  "../assets/companies/*.{png,jpg,jpeg}",
+  { eager: true }
+);
+
+// Convert to usable array
+const COMPANY_LOGOS = Object.values(companyImages).map(
+  (mod) => mod.default
+);
 
 useEffect(() => {
   const observer = new IntersectionObserver(
@@ -175,9 +197,13 @@ useEffect(() => {
       {/* CTA */}
       <div className="hero-actions">
         {syllabusPdf && (
-          <a href={syllabusPdf} download className="btn-primary-lg">
-            <FaDownload /> Download Syllabus
-          </a>
+          <button
+  className="btn-primary-lg"
+  onClick={() => setShowSyllabusModal(true)}
+>
+  <FaDownload /> Download Syllabus
+</button>
+
         )}
 
         <button className="btn-outline-lg">
@@ -189,7 +215,18 @@ useEffect(() => {
 
     {/* RIGHT FORM */}
     <div className="hero-form-card">
-      <QuickEnquiry />
+      <QuickEnquiry
+  onSuccess={() => {
+    const link = document.createElement("a");
+    link.href = syllabusPdf;
+    link.download = `${title}-syllabus.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setShowSyllabusModal(false);
+  }}
+/>
+
     </div>
 
   </div>
@@ -346,82 +383,29 @@ useEffect(() => {
 {/* ===============================
    PROGRAM HIGHLIGHTS
 ================================ */}
-<section className="program-highlights animate-on-scroll" ref={ref}>
-  <h2 className="section-title">
-    Transform Your Prep With One Smart Program
-  </h2>
+{highlights?.length > 0 && (
+  <section className="program-highlights animate-on-scroll" ref={ref}>
+    <h2 className="section-title">
+      Transform Your Prep With One Smart Program
+    </h2>
 
-  <p className="section-sub">
-    A single program that covers all key areas without the overwhelm or distractions.
-  </p>
-<div className="ph-grid">
+    <p className="section-sub">
+      A single program that covers all key areas without the overwhelm.
+    </p>
 
-  <div className="ph-item">
-    <div className="ph-icon">
-      <FaClock />
+    <div className="ph-grid">
+      {highlights.map((item, i) => (
+        <div key={i} className="ph-item">
+          <div className="ph-icon">
+            {HIGHLIGHT_ICONS[item.icon]}
+          </div>
+          <h3>{item.value}</h3>
+          <p>{item.label}</p>
+        </div>
+      ))}
     </div>
-    <h3>300+ Hours</h3>
-    <p>Live + Recorded Interactive Sessions</p>
-  </div>
-
-  <div className="ph-item">
-    <div className="ph-icon">
-      <FaCalendarAlt />
-    </div>
-    <h3>9 Months</h3>
-    <p>Weekend Classes</p>
-  </div>
-
-  <div className="ph-item">
-    <div className="ph-icon">
-      <FaRobot />
-    </div>
-    <h3>AI-Driven</h3>
-    <p>Personal Tech Assistant</p>
-  </div>
-
-  <div className="ph-item">
-    <div className="ph-icon">
-      <FaBuilding />
-    </div>
-    <h3>4 Days</h3>
-    <p>Offline Immersion Program</p>
-  </div>
-
-  <div className="ph-item">
-    <div className="ph-icon">
-      <FaBrain />
-    </div>
-    <h3>Cutting-Edge Tech</h3>
-    <p>OpenAI, Gemini & System Design</p>
-  </div>
-
-  <div className="ph-item">
-    <div className="ph-icon">
-      <FaRocket />
-    </div>
-    <h3>15 Hands-On Projects</h3>
-    <p>3+ Capstones (AI / RAG)</p>
-  </div>
-
-  <div className="ph-item">
-    <div className="ph-icon">
-      <FaBullseye />
-    </div>
-    <h3>Ace the Interview</h3>
-    <p>Targeted Prep for Tech & Product Roles</p>
-  </div>
-
-  <div className="ph-item">
-    <div className="ph-icon">
-      <FaHandshake />
-    </div>
-    <h3>Flagship Mentors</h3>
-    <p>From Leading Tech Companies</p>
-  </div>
-
-</div>
-</section>
+  </section>
+)}
 
       {/* =================================================
           3. WHAT YOU WILL BECOME
@@ -440,72 +424,98 @@ useEffect(() => {
           </div>
         </section>
       )}
-{/* ===============================
-   CURRICULUM ROADMAP
-================================ */}
-<section className="curriculum-roadmap">
-  <h2 className="section-title">Curriculum Journey</h2>
-  <span className="section-underline" />
+<section className="curriculum-journey">
+  <div className="container">
+    <header className="section-header">
+      <span className="eyebrow">Learning Roadmap</span>
+      <h2 className="section-title">Curriculum Journey</h2>
+      <p className="section-sub">
+        A structured progression from fundamentals to job-ready expertise.
+      </p>
+    </header>
 
-  {/* ===== DESKTOP HORIZONTAL ROADMAP ===== */}
-  <div className="roadmap-track desktop-only">
-    {modules.map((m, i) => (
-      <div key={i} className="roadmap-step">
-        <div className="roadmap-index">{i + 1}</div>
+    {/* ===== DESKTOP FLOW VIEW ===== */}
+    <div className="flow-chevron-wrapper desktop-only">
+      <div className="chevron-flow">
+        {modules.map((m, i) => (
+          <div key={i} className="chevron-step">
+            <div className="chevron-card">
+              <div className="chevron-number">
+                {String(i + 1).padStart(2, '0')}
+              </div>
+              <h3>{m.title}</h3>
+              <div className="chevron-topics">
+                {m.topics.slice(0, 3).map((t, idx) => (
+                  <span key={idx} className="topic-pill">
+                    {t}
+                  </span>
+                ))}
+                {m.topics.length > 3 && (
+                  <span className="topic-more">+{m.topics.length - 3} more</span>
+                )}
+              </div>
+            </div>
+            {i < modules.length - 1 && (
+              <div className="chevron-arrow">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <path
+                    d={i % 4 === 3 
+                      ? "M 0,50 Q 50,80 100,50" 
+                      : "M 0,50 Q 50,20 100,50"
+                    }
+                    fill="none"
+                    stroke="url(#gradient)"
+                    strokeWidth="2"
+                  />
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#c7d2fe" />
+                      <stop offset="100%" stopColor="#2563eb" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div className="arrow-head"></div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
 
-        <div className="roadmap-card">
-          <h3>{m.title}</h3>
-
-          <div className="roadmap-tags">
-            {m.topics.map((t, idx) => (
-              <span key={idx} className="roadmap-tag">
-                {t}
-              </span>
-            ))}
+    {/* ===== MOBILE ACCORDION ===== */}
+    <div className="flow-mobile mobile-only">
+      {modules.map((m, i) => (
+        <div key={i} className={`mobile-step ${openIndex === i ? 'is-active' : ''}`}>
+          <button className="mobile-header" onClick={() => toggle(i)}>
+            <span className="mobile-num">{i + 1}</span>
+            <span className="mobile-title">{m.title}</span>
+            <span className="chevron">{openIndex === i ? "−" : "+"}</span>
+          </button>
+          
+          <div className="mobile-body">
+            <div className="mobile-content-inner">
+              {m.topics.map((t, idx) => (
+                <span key={idx} className="topic-pill">{t}</span>
+              ))}
+            </div>
           </div>
         </div>
+      ))}
+    </div>
 
-        {i !== modules.length - 1 && <div className="roadmap-line" />}
-      </div>
-    ))}
-  </div>
-
-  {/* ===== MOBILE STACKED ACCORDION ===== */}
-  <div className="mobile-only roadmap-mobile">
-    {modules.map((m, i) => (
-      <div key={i} className="mobile-roadmap-card">
-        <button
-          className="mobile-roadmap-header"
-          onClick={() => toggle(i)}
-        >
-          <span>{i + 1}. {m.title}</span>
-          <span className="chevron">{openIndex === i ? "−" : "+"}</span>
+    {/* ===== CTA ===== */}
+    {syllabusPdf && (
+      <div className="flow-cta">
+        <button className="btn-premium" onClick={() => setShowSyllabusModal(true)}>
+          <span>Download Complete Syllabus</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
         </button>
-
-        {openIndex === i && (
-          <div className="mobile-roadmap-content">
-            {m.topics.map((t, idx) => (
-              <span key={idx} className="roadmap-tag">
-                {t}
-              </span>
-            ))}
-          </div>
-        )}
       </div>
-    ))}
+    )}
   </div>
-
-  {/* ===== DOWNLOAD CTA ===== */}
-  {syllabusPdf && (
-   <div className="curriculum-cta">
-  <a href={syllabusPdf} className="btn-primary" download>
-    Download Full Syllabus
-  </a>
-</div>
-
-  )}
 </section>
-
 
       {/* =================================================
           5. TOOLS
@@ -563,46 +573,59 @@ useEffect(() => {
   <div className="section-inner">
    
     {/* Row 1 — LTR */}
-    <div className="logo-row ltr" aria-label="Companies row 1">
+    <div className="logo-row ltr">
       <div className="logo-track">
         {[...COMPANY_LOGOS, ...COMPANY_LOGOS].map((src, i) => (
-          <div className="logo-cell" key={`r1-${i}`}>
-            <img src={src} alt={`Company ${((i % COMPANY_LOGOS.length) + 1)}`} />
+          <div className="logo-cell" key={`ltr-${i}`}>
+            <img
+              src={src}
+              alt={`Hiring partner ${i + 1}`}
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
     </div>
 
-    {/* Row 2 — RTL */}
-    <div className="logo-row rtl" aria-label="Companies row 2">
+    {/* Row 2 — Right to Left */}
+    <div className="logo-row rtl">
       <div className="logo-track">
         {[...COMPANY_LOGOS, ...COMPANY_LOGOS].map((src, i) => (
-          <div className="logo-cell" key={`r2-${i}`}>
-            <img src={src} alt={`Company ${((i % COMPANY_LOGOS.length) + 1)}`} />
+          <div className="logo-cell" key={`rtl-${i}`}>
+            <img
+              src={src}
+              alt={`Hiring partner ${i + 1}`}
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
     </div>
 
-    {/* Row 3 — LTR */}
-    <div className="logo-row ltr" aria-label="Companies row 3">
+    {/* Row 3 — Left to Right */}
+    <div className="logo-row ltr">
       <div className="logo-track">
         {[...COMPANY_LOGOS, ...COMPANY_LOGOS].map((src, i) => (
-          <div className="logo-cell" key={`r3-${i}`}>
-            <img src={src} alt={`Company ${((i % COMPANY_LOGOS.length) + 1)}`} />
+          <div className="logo-cell" key={`ltr2-${i}`}>
+            <img
+              src={src}
+              alt={`Hiring partner ${i + 1}`}
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
     </div>
   </div>
 </section>
-      </section>
 
-      {/* =================================================
+      </section>
+ <div className="oneone">     {/* =================================================
           8. UPCOMING BATCHES
       ================================================= */}
       <UpcomingBatches />
-
+</div>
+ 
       {/* =================================================
           9. FAQ
       ================================================= */}
@@ -647,14 +670,18 @@ useEffect(() => {
             <p>Submit your details to receive the syllabus PDF.</p>
 
             <QuickEnquiry
-              onSuccess={() => {
-                const a = document.createElement("a");
-                a.href = syllabusPdf;
-                a.download = "course-syllabus.pdf";
-                a.click();
-                setShowSyllabusModal(false);
-              }}
-            />
+  onSuccess={() => {
+    const link = document.createElement("a");
+    link.href = syllabusPdf;
+    link.download = `${title}-syllabus.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setShowSyllabusModal(false);
+  }}
+/>
+
+
           </div>
         </div>
       )}

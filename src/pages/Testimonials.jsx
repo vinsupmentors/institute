@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Testimonials.css";
 import QuickEnquiry from "../components/QuickEnquiry";
+import Loader from "../components/Loader";
+
 
 const API_URL =
   "https://script.google.com/macros/s/AKfycbxl_6f8kPi0cMxa3XwE_FUhZMbUG6KolMIAFvSQb7PAgTXgSO1WB3Pv7eyyAw1NIZKN5w/exec";
@@ -10,29 +12,44 @@ export default function Testimonials() {
   const [instagram, setInstagram] = useState({});
   const [textTestimonials, setTextTestimonials] = useState([]);
   const carouselRef = useRef(null);
+  const [loading, setLoading] = useState(true);
+
 
   /* ===============================
      FETCH ALL TESTIMONIAL DATA
   =============================== */
-  useEffect(() => {
-    fetch(API_URL)
-      .then(res => res.json())
-      .then(data => {
-        // HERO YOUTUBE (supports 1 or more)
-        if (data.youtube) {
-          setYoutubeVideos(
-            Array.isArray(data.youtube) ? data.youtube : [data.youtube]
-          );
-        }
+ useEffect(() => {
+  let mounted = true;
+  setLoading(true);
 
-        // INSTAGRAM (grouped by category)
-        setInstagram(data.instagram || {});
+  fetch(API_URL)
+    .then(res => res.json())
+    .then(data => {
+      if (!mounted) return;
 
-        // TEXT TESTIMONIALS
-        setTextTestimonials(data.text || []);
-      })
-      .catch(err => console.error("Testimonials API error:", err));
-  }, []);
+      // HERO YOUTUBE
+      if (data.youtube) {
+        setYoutubeVideos(
+          Array.isArray(data.youtube) ? data.youtube : [data.youtube]
+        );
+      }
+
+      // INSTAGRAM
+      setInstagram(data.instagram || {});
+
+      // TEXT TESTIMONIALS
+      setTextTestimonials(data.text || []);
+    })
+    .catch(err => {
+      console.error("Testimonials API error:", err);
+    })
+    .finally(() => {
+      if (mounted) setLoading(false);
+    });
+
+  return () => (mounted = false);
+}, []);
+
 
   /* ===============================
      TEXT TESTIMONIAL CAROUSEL
@@ -82,6 +99,8 @@ export default function Testimonials() {
           </p>
         </div>
       </section>
+        {/* LOADER */}
+  {loading && <Loader />}
 
       {/* ===============================
           HERO YOUTUBE VIDEOS
