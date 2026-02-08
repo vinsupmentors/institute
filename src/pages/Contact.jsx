@@ -62,8 +62,7 @@ export default function Contact() {
                   <h3>Address</h3>
                   <p>
                     Vinsup Skill Academy<br />
-                    2nd Floor, Tech Park Building,<br />
-                    Chennai - 600042
+                    A,B, gopalsamy, 148, Gopalasamy Koil St, Sridevi Nagar, Ganapathy, Coimbatore, Tamil Nadu 641006
                   </p>
                 </div>
               </div>
@@ -83,14 +82,11 @@ export default function Contact() {
 
           {/* RIGHT SIDE — GOOGLE MAP */}
           <div className="contact-right">
-            <iframe
-              title="Vinsup Map"
+            
+            <iframe  title="Vinsup Skill Academy Map"
               width="100%"
               height="450"
-              style={{ borderRadius: "18px", border: "0" }}
-              src="https://www.google.com/maps?q=Chennai%20Tech%20Park&output=embed"
-              loading="lazy"
-            ></iframe>
+              style={{ borderRadius: "18px", border: "0"}} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.0301950209086!2d76.9766653!3d11.036361399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85963b47c9905%3A0xccf88b0cf54e457e!2sVINSUP%20SKILL%20ACADEMY!5e0!3m2!1sen!2sin!4v1770581316273!5m2!1sen!2sin" ></iframe>
           </div>
         </div>
       </section>
@@ -104,7 +100,7 @@ export default function Contact() {
 
           <div className="action-row">
             {/* CALL US */}
-            <a href="tel:+919876543210" className="action-box">
+            <a href="tel:+918870060607" className="action-box">
               <span className="action-icon">
                 {/* Phone SVG */}
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
@@ -117,13 +113,13 @@ export default function Contact() {
 
               <div>
                 <h3>Call Us</h3>
-                <p>+91 98765 43210</p>
+                <p>+91 88700-60607 </p>
               </div>
             </a>
 
             {/* WHATSAPP */}
             <a
-              href="https://wa.me/919876543210?text=Hi%20Vinsup%20Skill%20Academy"
+              href="https://wa.me/918870060607?text=Hi%20Vinsup%20Skill%20Academy"
               target="_blank"
               rel="noopener noreferrer"
               className="action-box"

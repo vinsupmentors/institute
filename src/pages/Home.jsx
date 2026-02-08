@@ -5,8 +5,27 @@ import ReviewsShowcase from "../components/ReviewsShowcase";
 import QuickEnquiry from "../components/QuickEnquiry";
 import Popup from "../components/Popup";
 import '../styles/Home.css'
-import img1 from "../assets/IMG_0044.JPG";
-import img2 from "../assets/IMG_0044.JPG";
+import daImg from "../assets/da.png";
+import dmImg from "../assets/dm.png";
+import dvpImg from "../assets/dvp.png";
+import dvsImg from "../assets/dvs.png";
+import uxImg from "../assets/ux.png";
+import fsdImg from "../assets/fsd.png";
+import img1 from "../assets/welcome/image1.png";
+import img2 from "../assets/welcome/image2.png";
+import img3 from "../assets/welcome/image3.png";
+import img4 from "../assets/welcome/image4.png";
+import img5 from "../assets/welcome/image5.png";
+import img6 from "../assets/welcome/image6.png";
+import jobRoleImg from "../assets/jrp/IMG_6329.PNG";
+import practicalImg from "../assets/jrp/Practical training.png";
+import portfolioImg from "../assets/jrp/Portfolio building.png";
+import softSkillImg from "../assets/jrp/Soft skill .png";
+import mockImg from "../assets/jrp/Mock interview.png";
+import placementImg from "../assets/jrp/Placement Assistance.png";
+
+
+
 import whoarewe from '../assets/courses/who are we.png'
 const API_URL =
   "https://script.google.com/macros/s/AKfycbxl_6f8kPi0cMxa3XwE_FUhZMbUG6KolMIAFvSQb7PAgTXgSO1WB3Pv7eyyAw1NIZKN5w/exec";
@@ -21,14 +40,14 @@ const API_URL =
 /* Unique inline SVG icons per card */
 
 const carouselImages = [
-  
-  "/src/assets/welcome/image1.png",
-  "/src/assets/welcome/image2.png",
-  "/src/assets/welcome/image3.png",
-  "/src/assets/welcome/image4.png",
-  "/src/assets/welcome/image5.png",
-  "/src/assets/welcome/image6.png"
-]
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6
+];
+
 const WhyIcon = ({ k }) => {
   const common = { width: 28, height: 28, fill: "none", stroke: "currentColor", strokeWidth: 2 };
   switch (k) {
@@ -205,134 +224,119 @@ const steps = [
     title: "Job-Specific Training",
     points: [
       "Identifying student’s suitable job role",
-"Learning technologies required for the chosen role",
-"Understanding real company expectations",
-"Practicing job role-specific interview questions",
-"Working on role-focused project assignments",
-"Customizing resume according to targeted role",
-"Mock tests and technical challenge practice",
-"Career roadmap guidance for growth",
-"Continuous skill upgrade based on industry trends"
+      "Learning technologies required for the chosen role",
+      "Understanding real company expectations",
+      "Practicing job role-specific interview questions",
+      "Working on role-focused project assignments",
+      "Customizing resume according to targeted role",
+      "Mock tests and technical challenge practice",
+      "Career roadmap guidance for growth",
+      "Continuous skill upgrade based on industry trends"
     ],
-    image: "/src/assets/jrp/IMG_6329.PNG"
+    image: jobRoleImg
   },
   {
     title: "Regular Worksheets & Practical Learning",
     points: [
       "Daily practice worksheets based on concepts learned",
-
-"Hands-on coding and real-time execution tasks",
-
-"Weekly assessments to track skill progress",
-
-"Mini-projects for each module",
-
-"Real-world case-study analysis",
-
-"Peer review and correction activities",
-
-"Task submission with deadlines to build discipline",
-
-"Concept revision through practice quizzes",
-
-"Monthly skill evaluation tests"
+      "Hands-on coding and real-time execution tasks",
+      "Weekly assessments to track skill progress",
+      "Mini-projects for each module",
+      "Real-world case-study analysis",
+      "Peer review and correction activities",
+      "Task submission with deadlines to build discipline",
+      "Concept revision through practice quizzes",
+      "Monthly skill evaluation tests"
     ],
-    image: "/src/assets/jrp/Practical training.png"
+    image: practicalImg
   },
   {
     title: "Resume & Portfolio Building",
-    points:  [
+    points: [
       "Choosing the correct resume format (ATS-friendly)",
-
-"Highlighting technical and soft skills",
-
-"Writing clear and concise career objectives",
-
-"Adding academic qualifications and certifications",
-
-"Listing internships, projects, and achievements",
-
-"Using powerful action verbs for job role descriptions",
-
-"Creating a clean and professional resume design",
-
-"Building an online portfolio (GitHub/Behance/Website)",
-
-"Linking portfolio and LinkedIn to resume for professional identity"
+      "Highlighting technical and soft skills",
+      "Writing clear and concise career objectives",
+      "Adding academic qualifications and certifications",
+      "Listing internships, projects, and achievements",
+      "Using powerful action verbs for job role descriptions",
+      "Creating a clean and professional resume design",
+      "Building an online portfolio (GitHub/Behance/Website)",
+      "Linking portfolio and LinkedIn to resume for professional identity"
     ],
-    image: "/src/assets/jrp/Portfolio building.png"
+    image: portfolioImg
   },
   {
     title: "Soft Skill & Aptitude Training",
     points: [
       "Communication and spoken English improvement sessions",
-"Vocabulary building and sentence framing exercises",
-"Personality development and grooming sessions",
-"Presentation and public speaking practice",
-"Logical reasoning and problem-solving techniques",
-"Quantitative aptitude shortcuts and tricks",
-"Time management strategies during tests",
-"Confidence-building and interview body language training",
-"Group discussions and team communication activities"
+      "Vocabulary building and sentence framing exercises",
+      "Personality development and grooming sessions",
+      "Presentation and public speaking practice",
+      "Logical reasoning and problem-solving techniques",
+      "Quantitative aptitude shortcuts and tricks",
+      "Time management strategies during tests",
+      "Confidence-building and interview body language training",
+      "Group discussions and team communication activities"
     ],
-    image: "/src/assets/jrp/Soft skill .png"
+    image: softSkillImg
   },
   {
     title: "Internship Experience",
     points: [
       "Working on real-time or industry-based projects",
-"Learning project documentation and report preparation",
-"Understanding teamwork and task communication",
-"Experiencing professional work culture",
-"Practicing time and resource management",
-"Learning industry-relevant tools and workflows",
-"Exposure to client requirements and review feedback",
-"Weekly review and performance-based guidance",
-"Certificate and experience letter for resume and portfolio"
+      "Learning project documentation and report preparation",
+      "Understanding teamwork and task communication",
+      "Experiencing professional work culture",
+      "Practicing time and resource management",
+      "Learning industry-relevant tools and workflows",
+      "Exposure to client requirements and review feedback",
+      "Weekly review and performance-based guidance",
+      "Certificate and experience letter for resume and portfolio"
     ],
-    image: "/src/assets/jrp/Practical training.png"
+    image: practicalImg
   },
   {
     title: "Mock Interviews",
     points: [
       "Simulation of HR and Technical interview rounds",
-"Practice answering frequently asked interview questions",
-"Improving voice clarity and communication style",
-"Feedback and correction from mentors",
-"Handling stress and uncomfortable questions",
-"Training on body language and eye contact",
-"Resume-based personalized questions",
-"Panel and one-on-one interview practice",
-"Building confidence and interview presence"
+      "Practice answering frequently asked interview questions",
+      "Improving voice clarity and communication style",
+      "Feedback and correction from mentors",
+      "Handling stress and uncomfortable questions",
+      "Training on body language and eye contact",
+      "Resume-based personalized questions",
+      "Panel and one-on-one interview practice",
+      "Building confidence and interview presence"
     ],
-    image: "/src/assets/jrp/Mock interview.png"
+    image: mockImg
   },
   {
     title: "Placement Assistance",
     points: [
-     "Resume and LinkedIn profile optimization",
-"Circulating profiles to hiring partners",
-"Training for aptitude and technical exam rounds",
-"Regular job opening notifications",
-"Interview scheduling and follow-up assistance",
-"Interview Q&A practice sessions",
-"HR round and communication guidance",
-"Support in offer negotiation and joining process",
-"Continuous assistance until placement confirmation"
+      "Resume and LinkedIn profile optimization",
+      "Circulating profiles to hiring partners",
+      "Training for aptitude and technical exam rounds",
+      "Regular job opening notifications",
+      "Interview scheduling and follow-up assistance",
+      "Interview Q&A practice sessions",
+      "HR round and communication guidance",
+      "Support in offer negotiation and joining process",
+      "Continuous assistance until placement confirmation"
     ],
-    image: "/src/assets/jrp/Placement Assistance.png"
+    image: placementImg
   }
 ];
 
-  /* ====== HERO CAROUSEL (top) ====== */
-  const images = [
-  { src: "/src/assets/da.png", link: "/courses/data-analytics" },
-  { src: "/src/assets/dm.png", link: "/courses/digital-marketing" },
-  { src: "/src/assets/dvp.png", link: "/courses/data-verse-pro" },
-  { src: "/src/assets/dvs.png", link: "/courses/devstack-fullstack-devops" },
-  { src: "/src/assets/ux.png", link: "/courses/ui-ux-design" },
-  { src: "/src/assets/fsd.png", link: "/courses/frontend" }
+
+ const images = [
+  { src: daImg, link: "/courses/data-analytics" },
+  { src: dmImg, link: "/courses/digital-marketing" },
+  { src: dvpImg, link: "/courses/data-verse-pro" },
+  { src: dvsImg, link: "/courses/devstack-fullstack-devops" },
+  { src: uxImg, link: "/courses/ui-ux-design" },
+  { src: fsdImg, link: "/courses/frontend" }
 ];
+
 
 useEffect(() => {
   if (!images.length) return;

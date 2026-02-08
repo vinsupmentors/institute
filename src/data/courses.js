@@ -1,5 +1,90 @@
 // src/data/courses.js
-// import shree from '../assets/courses/2.png'  
+
+// =====================================================
+// COURSE IMAGES
+// =====================================================
+import dvpImage from '../assets/courses/dvp.png';
+import daImage from '../assets/courses/da.png';
+import dvsImage from '../assets/courses/dvs.png';
+import fsdImage from '../assets/courses/fsd.png';
+import uxImage from '../assets/courses/ux.png';
+import dmImage from '../assets/courses/dm.png';
+
+// =====================================================
+// DATA VERSE PRO TOOLS
+// =====================================================
+import dvpPython from '../assets/front end/data verse pro/PY.jpeg';
+import dvpExcel from '../assets/front end/data verse pro/EXCEL.jpeg';
+import dvpSQL from '../assets/front end/data verse pro/SQL.png';
+import dvpNumpy from '../assets/front end/data verse pro/NUMPY.png';
+import dvpTableau from '../assets/front end/data verse pro/TABLE.jpg';
+import dvpJupyter from '../assets/front end/data verse pro/JUPY.png';
+import dvpColab from '../assets/front end/data verse pro/COLOB.png';
+import dvpGemini from '../assets/front end/data verse pro/GEMNII.JPG';
+import dvpChatGPT from '../assets/front end/data verse pro/GPT.png';
+import dvpPowerBI from '../assets/front end/data verse pro/BI.png';
+import dvpLooker from '../assets/front end/data verse pro/LOOK.jpg';
+import dvpJira from '../assets/front end/data verse pro/JIRA.png';
+import dvpSeaborn from '../assets/front end/data verse pro/seaborn.svg';
+
+// =====================================================
+// DATA ANALYTICS TOOLS
+// =====================================================
+import daExcel from '../assets/front end/data analytics/EXCEL.jpeg';
+import daSQL from '../assets/front end/data analytics/SQL.png';
+import daPowerBI from '../assets/front end/data analytics/PBI.png';
+import daPython from '../assets/front end/data analytics/PY.png';
+import daStat from '../assets/front end/data analytics/STAT.jpeg';
+
+// =====================================================
+// DEVSTACK TOOLS
+// =====================================================
+import devHTML from '../assets/front end/dev stack/html.svg';
+import devCSS from '../assets/front end/dev stack/CSS.jpeg';
+import devBootstrap from '../assets/front end/dev stack/BOOT.png';
+import devJS from '../assets/front end/dev stack/js.jpg';
+import devReact from '../assets/front end/dev stack/REACT.jpeg';
+import devNode from '../assets/front end/dev stack/NODE.png';
+import devExpress from '../assets/front end/dev stack/EXPRESS.png';
+import devMongo from '../assets/front end/dev stack/MONGO.JPG';
+import devGit from '../assets/front end/dev stack/GIT.png';
+import devGitHub from '../assets/front end/dev stack/GITHUB.png';
+import devJira from '../assets/front end/dev stack/JIRA.png';
+import devJenkins from '../assets/front end/dev stack/JEN.png';
+import devDocker from '../assets/front end/dev stack/DOCK.jpeg';
+
+// =====================================================
+// UI/UX TOOLS
+// =====================================================
+import uxFigma from '../assets/front end/uxui/FIGMA.png';
+import uxPhotoshop from '../assets/front end/uxui/PS.png';
+import uxIllustrator from '../assets/front end/uxui/AI.png';
+import uxBlender from '../assets/front end/uxui/BLEN.png';
+
+// =====================================================
+// DIGITAL MARKETING TOOLS
+// =====================================================
+import dmGoogleAds from '../assets/front end/digital marketing/GAD.png';
+import dmMeta from '../assets/front end/digital marketing/META.png';
+import dmHubspot from '../assets/front end/digital marketing/HUB.png';
+import dmShopify from '../assets/front end/digital marketing/123.svg';
+import dmWordPress from '../assets/front end/digital marketing/WORD.png';
+import dmCanva from '../assets/front end/digital marketing/CANVA.png';
+import dmMailchimp from '../assets/front end/digital marketing/MAIL.png';
+import dmElementor from '../assets/front end/digital marketing/ELE.png';
+import dmHrefs from '../assets/front end/digital marketing/HREF.png';
+
+// =====================================================
+// COMPANY LOGOS
+// =====================================================
+import company1 from '../assets/companies/company1.jpeg';
+import company2 from '../assets/companies/company2.jpeg';
+import company3 from '../assets/companies/company3.jpeg';
+import company4 from '../assets/companies/company4.jpeg';
+
+// =====================================================
+// COURSES DATA
+// =====================================================
 const courses = [
   /* =====================================================
      DATA VERSE PRO
@@ -9,11 +94,8 @@ const courses = [
     title: "Data Verse Pro",
     category: "data",
     badge: "Best Seller",
-     trustImage: "/src/assets/courses/dvp.png",
-
-  //,
-  // optional (for accessibility / SEO)
-  trustImageAlt: "Industry aligned data engineering curriculum",
+    trustImage: dvpImage,
+    trustImageAlt: "Industry aligned data engineering curriculum",
 
     short: "A complete data analytics + engineering career program.",
     duration: "2.5 Months",
@@ -34,98 +116,83 @@ const courses = [
     ],
 
     tools: [
-      { name: "Python", img: "/src/assets/front end/data verse pro/PY.jpeg" },
-         { name: "Excel", img: "/src/assets/front end/data verse pro/EXCEL.jpeg" },
-            { name: "Python", img: "/src/assets/front end/data verse pro/PY.jpeg" },
-      { name: "SQL", img: "/src/assets/front end/data verse pro/SQL.png" },
-      { name: "Pandas", img: "/src/assets/front end/data verse pro/PY.jpeg" },
-      { name: "Numpy", img: "/src/assets/front end/data verse pro/NUMPY.png" },
-      { name: "Tableau", img: "/src/assets/front end/data verse pro/TABLE.jpg" },
-      { name: "Jupyter", img: "/src/assets/front end/data verse pro/JUPY.png" },
-      { name: "Google - Colob", img: "/src/assets/front end/data verse pro/COLOB.png" },
-      { name: "Gemini", img: "/src/assets/front end/data verse pro/GEMNII.JPG" },
-      { name: "ChatGPT", img: "/src/assets/front end/data verse pro/GPT.png" },
-      { name: "PowerBI", img: "/src/assets/front end/data verse pro/BI.png" },
-      { name: "Looker Studio", img: "/src/assets/front end/data verse pro/LOOK.jpg" },
-      { name: "JIRA", img: "/src/assets/front end/data verse pro/JIRA.png" },
-      { name: "Seaborn", img: "/src/assets/front end/data verse pro/seaborn.svg" }
-
+      { name: "Python", img: dvpPython },
+      { name: "Excel", img: dvpExcel },
+      { name: "Python", img: dvpPython },
+      { name: "SQL", img: dvpSQL },
+      { name: "Pandas", img: dvpPython },
+      { name: "Numpy", img: dvpNumpy },
+      { name: "Tableau", img: dvpTableau },
+      { name: "Jupyter", img: dvpJupyter },
+      { name: "Google - Colob", img: dvpColab },
+      { name: "Gemini", img: dvpGemini },
+      { name: "ChatGPT", img: dvpChatGPT },
+      { name: "PowerBI", img: dvpPowerBI },
+      { name: "Looker Studio", img: dvpLooker },
+      { name: "JIRA", img: dvpJira },
+      { name: "Seaborn", img: dvpSeaborn }
     ],
-   highlights: [
-  {
-    icon: "clock",
-    value: "250+ Hours",
-    label: "Live Interactive Sessions"
-  },
-  {
-    icon: "calendar",
-    value: "2 Months",
-    label: "Weekday Classes"
-  },
-  {
-    icon: "ai",
-    value: "AI-Driven",
-    label: "Personal Tech Assistant"
-  },
-  {
-    icon: "offline",
-    value: "6 Days",
-    label: "Offline Immersion Program"
-  },
-  {
-    icon: "projects",
-    value: "7 Hands-On Projects",
-    label: "2+ Capstones Projects"
-  },
-  {
-    icon: "target",
-    value: "Ace the Interview",
-    label: "Targeted Prep for Tech & Product Roles"
-  },
-  {
-    icon: "mentor",
-    value: "Flagship Mentors",
-    label: "From Leading Tech Companies"
-  },
-  {
-    icon: "tech",
-    value: "Cutting-Edge Tech",
-    label: "OpenAI, Gemini, RAG"
-  }
-],
 
-   modules: [
-  { title: "Excel", topics: ["Advanced Functions", "Pivot Tables", "Dashboards"] },
+    highlights: [
+      {
+        icon: "clock",
+        value: "250+ Hours",
+        label: "Live Interactive Sessions"
+      },
+      {
+        icon: "calendar",
+        value: "2 Months",
+        label: "Weekday Classes"
+      },
+      {
+        icon: "ai",
+        value: "AI-Driven",
+        label: "Personal Tech Assistant"
+      },
+      {
+        icon: "offline",
+        value: "6 Days",
+        label: "Offline Immersion Program"
+      },
+      {
+        icon: "projects",
+        value: "7 Hands-On Projects",
+        label: "2+ Capstones Projects"
+      },
+      {
+        icon: "target",
+        value: "Ace the Interview",
+        label: "Targeted Prep for Tech & Product Roles"
+      },
+      {
+        icon: "mentor",
+        value: "Flagship Mentors",
+        label: "From Leading Tech Companies"
+      },
+      {
+        icon: "tech",
+        value: "Cutting-Edge Tech",
+        label: "OpenAI, Gemini, RAG"
+      }
+    ],
 
-  { title: "SQL", topics: ["Queries & Filtering", "Joins", "Aggregations"] },
-
-  { title: "Power BI", topics: ["Data Modeling", "DAX Basics", "Reports & Dashboards"] },
-
-  { title: "Python", topics: ["Python Basics", "Data Analysis", "Visualization"] },
-
-  { title: "Google Colab / Jupyter Notebook", topics: ["Notebook Environment", "Running Code", "Data Exploration"] },
-
-  { title: "NumPy", topics: ["Arrays", "Mathematical Operations", "Broadcasting"] },
-
-  { title: "Pandas", topics: ["DataFrames", "Data Cleaning", "Aggregation"] },
-
-  { title: "Seaborn", topics: ["Statistical Plots", "EDA Visualizations", "Styling"] },
-
-  { title: "Statistics", topics: ["Descriptive Statistics", "Probability", "Hypothesis Testing"] },
-
-  { title: "Tableau", topics: ["Calculated Fields", "Dashboards", "Data Storytelling"] },
-
-  { title: "Machine Learning", topics: ["Regression", "Classification", "Model Evaluation"] },
-
-  { title: "Jira", topics: ["Agile Basics", "Issue Tracking", "Sprint Management"] },
-
-  { title: "AI Tools - GPT, Gemini, Copilot", topics: ["Prompt Engineering", "Code Assistance", "Productivity Use Cases"] },
-
-  { title: "n8n (Automation)", topics: ["Workflow Automation", "API Integrations", "Data Pipelines"] },
-
-  { title: "Github", topics: ["Version Control", "Repositories & Branches", "Collaboration"] },
-]
-,
+    modules: [
+      { title: "Excel", topics: ["Advanced Functions", "Pivot Tables", "Dashboards"] },
+      { title: "SQL", topics: ["Queries & Filtering", "Joins", "Aggregations"] },
+      { title: "Power BI", topics: ["Data Modeling", "DAX Basics", "Reports & Dashboards"] },
+      { title: "Python", topics: ["Python Basics", "Data Analysis", "Visualization"] },
+      { title: "Google Colab / Jupyter Notebook", topics: ["Notebook Environment", "Running Code", "Data Exploration"] },
+      { title: "NumPy", topics: ["Arrays", "Mathematical Operations", "Broadcasting"] },
+      { title: "Pandas", topics: ["DataFrames", "Data Cleaning", "Aggregation"] },
+      { title: "Seaborn", topics: ["Statistical Plots", "EDA Visualizations", "Styling"] },
+      { title: "Statistics", topics: ["Descriptive Statistics", "Probability", "Hypothesis Testing"] },
+      { title: "Tableau", topics: ["Calculated Fields", "Dashboards", "Data Storytelling"] },
+      { title: "Machine Learning", topics: ["Regression", "Classification", "Model Evaluation"] },
+      { title: "Jira", topics: ["Agile Basics", "Issue Tracking", "Sprint Management"] },
+      { title: "AI Tools - GPT, Gemini, Copilot", topics: ["Prompt Engineering", "Code Assistance", "Productivity Use Cases"] },
+      { title: "n8n (Automation)", topics: ["Workflow Automation", "API Integrations", "Data Pipelines"] },
+      { title: "Github", topics: ["Version Control", "Repositories & Branches", "Collaboration"] }
+    ],
 
     syllabusPdf: "/syllabus/data-verse-pro.pdf",
 
@@ -133,26 +200,50 @@ const courses = [
 
     roles: ["Data Engineer", "ETL Developer", "BI Analyst", "ML Ops Engineer"],
 
-    companies: [
-      "/src/assets/companies/company1.jpeg",
-      "/src/assets/companies/company2.jpeg",
-      "/src/assets/companies/company3.jpeg"
-    ],
+    companies: [company1, company2, company3],
 
     faq: [
-      { q: " Why is Data Verse Pro the #1 Data Science Course for Newbies in 2026?", 
-        a: " Data Verse Pro is designed for the modern workplace (beyond the basic theory) and focuses on what will be trending in 2026. The course focuses on new trends in 2026 such as Generative Ai, Predictive Analytics and Machine Learning. Unlike standard courses, the Data Verse Pro curriculum combines Python, SQL and Power BI with real-world projects allowing you to be prepared for Data Analyst and Data Scientist positions." },
-      { q: "Does the Data Verse Pro Course Offer Training on AI and the Tools/Algorithms used to Create These Products?", 
-        a: " Yes, the Data Verse Pro Course provides in-depth training on artificial intelligence (AI) and machine learning (ML) algorithms. The course provides students hands-on experience using popular industry-standard libraries such as TensorFlow, Pandas, and Scikit-learn, making you well positioned to earn a lucrative salary in the AI and Data Science Space." },
-      { q: " Is Data Verse Pro a Certification Course and Will You Help Me Get Placed?",
-         a: "Yes, at the completion of the course, you receive a Data Science Certification from Vinsup Skill Academy, an industry-recognized certification. Additionally, we provide a dedicated placement service to help you gain employment at a reputed company by helping you with your resume and conducting mock interviews to prepare you for your next interview. " },
-      { q: "Do I need to have coding experience before joining Data Verse Pro?",
-         a: "No coding experience is necessary. We will teach Python and statistics from the ground up. Fresh graduates and professionals looking to enhance their data engineering skills can follow our structured program to learn data engineering concepts from the beginning." },
-         { q: "Will I complete any projects while enrolled in Data Verse Pro?",
-         a: "Yes. The capstone projects that you will create in Data Verse Pro will replicate the same problems experienced by businesses today. Some of the projects completed in the capstone will include predict customer churn, forecasting sales and developing an AI chatbot. Completing these live projects will give you an excellent opportunity to showcase your skills in your portfolio when applying for positions with employers." }
-
-
-    ]
+  { 
+    q: "What makes Data Verse Pro the best data science and data engineering course in 2026?", 
+    a: "Data Verse Pro is a comprehensive 250-hour program designed for the modern AI-driven workplace. Unlike basic theory courses, it focuses on trending technologies like Generative AI, Predictive Analytics, and Machine Learning. The curriculum combines Python, SQL, Power BI, Tableau, and advanced data engineering tools with real-world projects, making you job-ready for Data Analyst, Data Engineer, Data Scientist, and BI Analyst positions in top companies." 
+  },
+  { 
+    q: "Does Data Verse Pro provide training on AI tools and machine learning algorithms?", 
+    a: "Yes. Data Verse Pro offers in-depth training on artificial intelligence (AI) and machine learning (ML) algorithms. You'll gain hands-on experience with industry-standard tools including TensorFlow, Pandas, Scikit-learn, NumPy, and AI platforms like ChatGPT, Gemini, and Copilot. This prepares you for high-paying roles in the AI and Data Science industry." 
+  },
+  { 
+    q: "Is Data Verse Pro a job-oriented certification course with placement assistance?", 
+    a: "Yes. Data Verse Pro is 100% job-oriented and includes an industry-recognized Data Science Certification from Vinsup Skill Academy. We provide dedicated placement assistance including resume building, mock interviews, portfolio preparation, and direct referrals to reputed companies hiring Data Engineers, ETL Developers, and ML Ops Engineers." 
+  },
+  { 
+    q: "Do I need coding or programming experience to join Data Verse Pro?", 
+    a: "No prior coding experience is required. Data Verse Pro teaches Python programming, SQL, and statistics from scratch. The course is designed for fresh graduates, students, working professionals, and career switchers from non-IT backgrounds who want to build strong data engineering and analytics foundations." 
+  },
+  { 
+    q: "What real-world projects and capstone assignments are included in Data Verse Pro?", 
+    a: "Data Verse Pro includes 7+ hands-on projects and 2+ capstone projects replicating real business problems. Projects include customer churn prediction, sales forecasting, ETL pipeline development, AI chatbot creation, and data visualization dashboards. These live projects build a strong portfolio for showcasing your data engineering skills to employers." 
+  },
+  { 
+    q: "What tools and technologies are covered in the Data Verse Pro curriculum?", 
+    a: "You'll learn Python, Excel, SQL, Pandas, NumPy, Seaborn, Power BI, Tableau, Looker Studio, Jupyter Notebook, Google Colab, Machine Learning, Statistics, JIRA, n8n automation, GitHub, and AI tools like ChatGPT and Gemini. This comprehensive tech stack prepares you for modern data engineering and analytics roles." 
+  },
+  { 
+    q: "Is Data Verse Pro suitable for students, freshers, and working professionals?", 
+    a: "Absolutely. Data Verse Pro is designed for students building data foundations, fresh graduates starting data careers, working professionals upskilling into high-demand data roles, and career switchers transitioning from non-tech backgrounds into data science and data engineering." 
+  },
+  { 
+    q: "How long is the Data Verse Pro course and what is the class schedule?", 
+    a: "Data Verse Pro is a 2.5-month intensive program with 250+ hours of live interactive sessions. Classes are conducted on weekdays in both online and offline modes. The program includes a 6-day offline immersion program for hands-on practice and networking with industry experts." 
+  },
+  { 
+    q: "What job roles can I apply for after completing Data Verse Pro?", 
+    a: "Graduates of Data Verse Pro are qualified for roles including Data Engineer, ETL Developer, Business Intelligence (BI) Analyst, Data Analyst, Data Scientist, ML Ops Engineer, Analytics Engineer, and Database Developer across industries like IT, finance, healthcare, e-commerce, and consulting." 
+  },
+  { 
+    q: "Does Data Verse Pro include AI-driven learning and mentorship from industry experts?", 
+    a: "Yes. Data Verse Pro features AI-driven personal tech assistants for 24/7 learning support, flagship mentors from leading tech companies like Google, Microsoft, and Amazon, and hands-on guidance on cutting-edge technologies including OpenAI, Gemini, and RAG (Retrieval-Augmented Generation) systems." 
+  }
+]
   },
 
   /* =====================================================
@@ -163,10 +254,8 @@ const courses = [
     title: "Data Analytics",
     category: "data",
     badge: "Popular",
-      trustImage: "/src/assets/courses/da.png",
-
-  // optional (for accessibility / SEO)
-  trustImageAlt: "Industry aligned data engineering curriculum",
+    trustImage: daImage,
+    trustImageAlt: "Industry aligned data engineering curriculum",
 
     short: "Learn Excel, SQL, Power BI & Python.",
     duration: "1.5 Months",
@@ -185,72 +274,65 @@ const courses = [
     ],
 
     tools: [
-      { name: "Excel", img: "/src/assets/front end/data analytics/EXCEL.jpeg" },
-      { name: "SQL", img: "/src/assets/front end/data analytics/SQL.png" },
-      { name: "Power BI", img: "/src/assets/front end/data analytics/PBI.png" },
-      { name: "Python", img: "/src/assets/front end/data analytics/PY.png" },
-      { name: "Python", img: "/src/assets/front end/data analytics/STAT.jpeg" }
+      { name: "Excel", img: daExcel },
+      { name: "SQL", img: daSQL },
+      { name: "Power BI", img: daPowerBI },
+      { name: "Python", img: daPython },
+      { name: "Statistics", img: daStat }
     ],
- highlights: [
-  {
-    icon: "clock",
-    value: "100+ Hours",
-    label: "Live Interactive Sessions"
-  },
-  {
-    icon: "calendar",
-    value: "1 Months",
-    label: "Weekday Classes"
-  },
-  {
-    icon: "ai",
-    value: "AI-Driven",
-    label: "Personal Tech Assistant"
-  },
-  {
-    icon: "Offline",
-    value: "10 Days",
-    label: "SoftSkills Preparation"
-  },
-  {
-    icon: "projects",
-    value: "5 Projects",
-    label: "1+ AI Capstones"
-  },
-  {
-    icon: "target",
-    value: "Interview Ready",
-    label: "Tech & Product Roles"
-  },
-  {
-    icon: "mentor",
-    value: "Flagship Mentors",
-    label: "Industry Experts"
-  },
-  {
-    icon: "tech",
-    value: "Cutting-Edge Tech",
-    label: "OpenAI, Gemini, RAG"
-  }
-]
-,
+
+    highlights: [
+      {
+        icon: "clock",
+        value: "100+ Hours",
+        label: "Live Interactive Sessions"
+      },
+      {
+        icon: "calendar",
+        value: "1 Months",
+        label: "Weekday Classes"
+      },
+      {
+        icon: "ai",
+        value: "AI-Driven",
+        label: "Personal Tech Assistant"
+      },
+      {
+        icon: "Offline",
+        value: "10 Days",
+        label: "SoftSkills Preparation"
+      },
+      {
+        icon: "projects",
+        value: "5 Projects",
+        label: "1+ AI Capstones"
+      },
+      {
+        icon: "target",
+        value: "Interview Ready",
+        label: "Tech & Product Roles"
+      },
+      {
+        icon: "mentor",
+        value: "Flagship Mentors",
+        label: "Industry Experts"
+      },
+      {
+        icon: "tech",
+        value: "Cutting-Edge Tech",
+        label: "OpenAI, Gemini, RAG"
+      }
+    ],
 
     modules: [
-  { title: "Excel", topics: ["Advanced Functions", "Pivot Tables", "Dashboards"] },
-
-  { title: "SQL", topics: ["Queries & Filtering", "Joins", "Aggregations"] },
-
-  { title: "Power BI", topics: ["Data Modeling", "DAX Basics", "Reports & Dashboards"] },
-
-  { title: "Python", topics: ["Python Basics", "Data Analysis", "Visualization"] },
-
-  { title: "Pandas", topics: ["Data Structures", "Data Cleaning", "Data Manipulation"] },
-
-  { title: "Seaborn", topics: ["Statistical Plots", "Categorical Plots", "Advanced Visualization"] },
-
-  { title: "Statistics", topics: ["Descriptive Statistics", "Probability & Distributions", "Inferential Statistics"] }
-]
-,
+      { title: "Excel", topics: ["Advanced Functions", "Pivot Tables", "Dashboards"] },
+      { title: "SQL", topics: ["Queries & Filtering", "Joins", "Aggregations"] },
+      { title: "Power BI", topics: ["Data Modeling", "DAX Basics", "Reports & Dashboards"] },
+      { title: "Python", topics: ["Python Basics", "Data Analysis", "Visualization"] },
+      { title: "Pandas", topics: ["Data Structures", "Data Cleaning", "Data Manipulation"] },
+      { title: "Seaborn", topics: ["Statistical Plots", "Categorical Plots", "Advanced Visualization"] },
+      { title: "Statistics", topics: ["Descriptive Statistics", "Probability & Distributions", "Inferential Statistics"] }
+    ],
 
     syllabusPdf: "/syllabus/data-analytics.pdf",
 
@@ -258,22 +340,50 @@ const courses = [
 
     roles: ["Data Analyst", "Business Analyst"],
 
-    companies: ["/src/assets/companies/company1.jpeg"],
+    companies: [company1],
 
     faq: [
-      { q: " Why is Data Verse Pro the #1 Data Science Course for Newbies in 2026?", 
-        a: " Data Verse Pro is designed for the modern workplace (beyond the basic theory) and focuses on what will be trending in 2026. The course focuses on new trends in 2026 such as Generative Ai, Predictive Analytics and Machine Learning. Unlike standard courses, the Data Verse Pro curriculum combines Python, SQL and Power BI with real-world projects allowing you to be prepared for Data Analyst and Data Scientist positions." },
-      { q: "Does the Data Verse Pro Course Offer Training on AI and the Tools/Algorithms used to Create These Products?", 
-        a: " Yes, the Data Verse Pro Course provides in-depth training on artificial intelligence (AI) and machine learning (ML) algorithms. The course provides students hands-on experience using popular industry-standard libraries such as TensorFlow, Pandas, and Scikit-learn, making you well positioned to earn a lucrative salary in the AI and Data Science Space." },
-      { q: " Is Data Verse Pro a Certification Course and Will You Help Me Get Placed?",
-         a: "Yes, at the completion of the course, you receive a Data Science Certification from Vinsup Skill Academy, an industry-recognized certification. Additionally, we provide a dedicated placement service to help you gain employment at a reputed company by helping you with your resume and conducting mock interviews to prepare you for your next interview. " },
-      { q: "Do I need to have coding experience before joining Data Verse Pro?",
-         a: "No coding experience is necessary. We will teach Python and statistics from the ground up. Fresh graduates and professionals looking to enhance their data engineering skills can follow our structured program to learn data engineering concepts from the beginning." },
-         { q: "Will I complete any projects while enrolled in Data Verse Pro?",
-         a: "Yes. The capstone projects that you will create in Data Verse Pro will replicate the same problems experienced by businesses today. Some of the projects completed in the capstone will include predict customer churn, forecasting sales and developing an AI chatbot. Completing these live projects will give you an excellent opportunity to showcase your skills in your portfolio when applying for positions with employers." }
-
-
-    ]
+  { 
+    q: "Which is the best data analytics course for beginners?", 
+    a: "Vinsup Skill Academy provides a beginner-friendly data analytics course with hands-on training and real-time projects." 
+  },
+  { 
+    q: "What skills are covered in the data analytics course?", 
+    a: "Excel, SQL, Power BI, Python basics, data visualization, and business analytics concepts." 
+  },
+  { 
+    q: "Is data analytics a good career option in India?", 
+    a: "Yes, data analytics is one of the fastest-growing career fields with high demand across industries." 
+  },
+  { 
+    q: "Do you provide placement support for data analytics?", 
+    a: "Yes, we offer placement assistance, resume building, and interview preparation." 
+  },
+  { 
+    q: "Is coding mandatory to learn data analytics?", 
+    a: "No. Coding is taught from fundamentals and gradually introduced." 
+  },
+  { 
+    q: "Who can join this data analytics course?", 
+    a: "Students, graduates, working professionals, and career switchers can join." 
+  },
+  { 
+    q: "Is this course suitable for non-technical students?", 
+    a: "Yes, the course is designed for both technical and non-technical backgrounds." 
+  },
+  { 
+    q: "Are real-time projects included?", 
+    a: "Yes, students work on real-world datasets and business case studies." 
+  },
+  { 
+    q: "Is this course available online?", 
+    a: "Yes, both online and offline learning options are available." 
+  },
+  { 
+    q: "What job roles can I apply for after completing data analytics training?", 
+    a: "Students can apply for roles like Data Analyst, Business Analyst, Reporting Analyst, and Junior Data Scientist." 
+  }
+]
   },
 
   /* =====================================================
@@ -284,10 +394,8 @@ const courses = [
     title: "DevStack – Fullstack with DevOps",
     category: "dev",
     badge: "Hot Program",
-      trustImage: "/src/assets/courses/dvs.png",
-
-  // optional (for accessibility / SEO)
-  trustImageAlt: "Industry aligned data engineering curriculum",
+    trustImage: dvsImage,
+    trustImageAlt: "Industry aligned data engineering curriculum",
 
     short: "Master MERN stack with DevOps tools.",
     duration: "2.5 Months",
@@ -305,145 +413,142 @@ const courses = [
       { title: "Developers", desc: "Upgrade with DevOps skills." }
     ],
 
- tools: [
-  { name: "HTML", img: "/src/assets/front end/dev stack/html.svg" },
-  { name: "CSS", img: "/src/assets/front end/dev stack/CSS.jpeg" },
-  { name: "Bootstrap", img: "/src/assets/front end/dev stack/BOOT.png" },
-  { name: "JavaScript", img: "/src/assets/front end/dev stack/js.jpg" },
-  { name: "React.js", img: "/src/assets/front end/dev stack/REACT.jpeg" },
-  { name: "Node.js", img: "/src/assets/front end/dev stack/NODE.png" },
-  { name: "Express.js", img: "/src/assets/front end/dev stack/EXPRESS.png" },
-  { name: "MongoDB", img: "/src/assets/front end/dev stack/MONGO.JPG" },
-  { name: "Git", img: "/src/assets/front end/dev stack/GIT.png" },
-  { name: "GitHub", img: "/src/assets/front end/dev stack/GITHUB.png" },
-  { name: "Jira", img: "/src/assets/front end/dev stack/JIRA.png" },
-  { name: "Jenkins", img: "/src/assets/front end/dev stack/JEN.png" },
-  { name: "Docker", img: "/src/assets/front end/dev stack/DOCK.jpeg" }
-],
+    tools: [
+      { name: "HTML", img: devHTML },
+      { name: "CSS", img: devCSS },
+      { name: "Bootstrap", img: devBootstrap },
+      { name: "JavaScript", img: devJS },
+      { name: "React.js", img: devReact },
+      { name: "Node.js", img: devNode },
+      { name: "Express.js", img: devExpress },
+      { name: "MongoDB", img: devMongo },
+      { name: "Git", img: devGit },
+      { name: "GitHub", img: devGitHub },
+      { name: "Jira", img: devJira },
+      { name: "Jenkins", img: devJenkins },
+      { name: "Docker", img: devDocker }
+    ],
 
- highlights: [
-  {
-    icon: "clock",
-    value: "300+ Hours",
-    label: "Live + Recorded Sessions"
-  },
-  {
-    icon: "calendar",
-    value: "9 Months",
-    label: "Weekend Classes"
-  },
-  {
-    icon: "ai",
-    value: "AI-Driven",
-    label: "Personal Tech Assistant"
-  },
-  {
-    icon: "offline",
-    value: "4 Days",
-    label: "Offline Immersion"
-  },
-  {
-    icon: "projects",
-    value: "15 Projects",
-    label: "3+ AI Capstones"
-  },
-  {
-    icon: "target",
-    value: "Interview Ready",
-    label: "Tech & Product Roles"
-  },
-  {
-    icon: "mentor",
-    value: "Flagship Mentors",
-    label: "Industry Experts"
-  },
-  {
-    icon: "tech",
-    value: "Cutting-Edge Tech",
-    label: "OpenAI, Gemini, RAG"
-  }
-]
-,
+    highlights: [
+      {
+        icon: "clock",
+        value: "300+ Hours",
+        label: "Live + Recorded Sessions"
+      },
+      {
+        icon: "calendar",
+        value: "9 Months",
+        label: "Weekend Classes"
+      },
+      {
+        icon: "ai",
+        value: "AI-Driven",
+        label: "Personal Tech Assistant"
+      },
+      {
+        icon: "offline",
+        value: "4 Days",
+        label: "Offline Immersion"
+      },
+      {
+        icon: "projects",
+        value: "15 Projects",
+        label: "3+ AI Capstones"
+      },
+      {
+        icon: "target",
+        value: "Interview Ready",
+        label: "Tech & Product Roles"
+      },
+      {
+        icon: "mentor",
+        value: "Flagship Mentors",
+        label: "Industry Experts"
+      },
+      {
+        icon: "tech",
+        value: "Cutting-Edge Tech",
+        label: "OpenAI, Gemini, RAG"
+      }
+    ],
 
     modules: [
-  {
-    title: "HTML",
-    topics: ["Elements & Attributes", "Forms & Tables", "Semantic HTML"]
-  },
-  {
-    title: "CSS",
-    topics: ["Flexbox", "Grid", "Responsive Design"]
-  },
-  {
-    title: "Bootstrap",
-    topics: ["Grid System", "Components", "Customization"]
-  },
-  {
-    title: "JavaScript",
-    topics: ["Variables & Functions", "DOM Manipulation", "ES6 Features"]
-  },
-  {
-    title: "React.js",
-    topics: ["Components & Props", "State & Hooks", "Routing"]
-  },
-  {
-    title: "Node.js",
-    topics: ["Event Loop", "File System", "Modules"]
-  },
-  {
-    title: "Express.js",
-    topics: ["Routing", "Middleware", "REST APIs"]
-  },
-  {
-    title: "MongoDB",
-    topics: ["CRUD Operations", "Schema Design", "Aggregation"]
-  },
-  {
-    title: "Git",
-    topics: ["Version Control Basics", "Branching", "Merging"]
-  },
-  {
-    title: "GitHub",
-    topics: ["Repositories", "Pull Requests", "GitHub Actions"]
-  },
-  {
-    title: "Jira",
-    topics: ["Issue Tracking", "Sprint Management", "Kanban Boards"]
-  },
-  {
-    title: "Jenkins",
-    topics: ["CI Pipelines", "Build Automation", "Deployment Jobs"]
-  },
-  {
-    title: "Docker",
-    topics: ["Images & Containers", "Dockerfile", "Docker Compose"]
-  }
-],
-
+      { title: "HTML", topics: ["Elements & Attributes", "Forms & Tables", "Semantic HTML"] },
+      { title: "CSS", topics: ["Flexbox", "Grid", "Responsive Design"] },
+      { title: "Bootstrap", topics: ["Grid System", "Components", "Customization"] },
+      { title: "JavaScript", topics: ["Variables & Functions", "DOM Manipulation", "ES6 Features"] },
+      { title: "React.js", topics: ["Components & Props", "State & Hooks", "Routing"] },
+      { title: "Node.js", topics: ["Event Loop", "File System", "Modules"] },
+      { title: "Express.js", topics: ["Routing", "Middleware", "REST APIs"] },
+      { title: "MongoDB", topics: ["CRUD Operations", "Schema Design", "Aggregation"] },
+      { title: "Git", topics: ["Version Control Basics", "Branching", "Merging"] },
+      { title: "GitHub", topics: ["Repositories", "Pull Requests", "GitHub Actions"] },
+      { title: "Jira", topics: ["Issue Tracking", "Sprint Management", "Kanban Boards"] },
+      { title: "Jenkins", topics: ["CI Pipelines", "Build Automation", "Deployment Jobs"] },
+      { title: "Docker", topics: ["Images & Containers", "Dockerfile", "Docker Compose"] }
+    ],
 
     syllabusPdf: "/syllabus/devstack.pdf",
 
     projects: "Build and deploy fullstack applications.",
 
     roles: [
-  "Frontend Developer",
-  "Backend Developer",
-  "Fullstack Developer",
-  "MERN Stack Developer",
-  "JavaScript Developer",
-  "Web Developer",
-  "DevOps Engineer",
-  "Cloud Engineer",
-  "Software Engineer",
-  "Application Developer"
-]
-,
+      "Frontend Developer",
+      "Backend Developer",
+      "Fullstack Developer",
+      "MERN Stack Developer",
+      "JavaScript Developer",
+      "Web Developer",
+      "DevOps Engineer",
+      "Cloud Engineer",
+      "Software Engineer",
+      "Application Developer"
+    ],
 
-    companies: ["/src/assets/companies/company2.jpeg"],
+    companies: [company2],
 
     faq: [
-      { q: "Is coding experience required?", a: "Basic knowledge helps." }
-    ]
+  { 
+    q: "What is DevStack and why is it the best fullstack development course with DevOps?", 
+    a: "DevStack is a comprehensive 250-hour program combining MERN Stack development (MongoDB, Express.js, React.js, Node.js) with DevOps tools like Docker, Jenkins, and GitHub. It's designed to create industry-ready fullstack developers with deployment skills, making graduates among the highest-paid IT professionals in the software development field." 
+  },
+  { 
+    q: "Is DevStack suitable for beginners with no coding experience?", 
+    a: "Yes. DevStack starts from fundamentals teaching HTML, CSS, JavaScript, and progressively advances to React.js, Node.js, Express.js, MongoDB, and DevOps tools. The course is perfect for students learning development from scratch, as well as existing developers upgrading with DevOps and fullstack skills." 
+  },
+  { 
+    q: "What technologies and tools will I learn in the DevStack course?", 
+    a: "You'll master HTML5, CSS3, Bootstrap, JavaScript (ES6+), React.js, Node.js, Express.js, MongoDB, Git, GitHub, JIRA, Jenkins CI/CD, Docker containerization, REST APIs, and deployment practices. This complete MERN Stack + DevOps toolkit prepares you for modern web development roles." 
+  },
+  { 
+    q: "Does DevStack provide hands-on projects and real-world application development?", 
+    a: "Absolutely. DevStack includes 15+ hands-on projects and 3+ AI-powered capstone projects. You'll build and deploy fullstack applications, create REST APIs, implement CI/CD pipelines, containerize applications with Docker, and develop production-ready web solutions that demonstrate your fullstack development capabilities." 
+  },
+  { 
+    q: "Is DevStack a job-oriented course with placement support and certification?", 
+    a: "Yes. DevStack is 100% job-oriented with placement assistance, interview preparation, resume building, and portfolio development. You receive an industry-recognized certification from Vinsup Skill Academy. Our career support helps you secure positions as Frontend Developer, Backend Developer, Fullstack Developer, MERN Stack Developer, or DevOps Engineer." 
+  },
+  { 
+    q: "What is the duration and class schedule for DevStack training?", 
+    a: "DevStack is a 2.5-month intensive program with 300+ hours including live and recorded sessions. Weekend classes are available for working professionals. The program includes a 4-day offline immersion for hands-on DevOps practice and collaborative fullstack development projects." 
+  },
+  { 
+    q: "What job roles can I apply for after completing DevStack?", 
+    a: "DevStack graduates qualify for Frontend Developer, Backend Developer, Fullstack Developer, MERN Stack Developer, JavaScript Developer, Web Developer, DevOps Engineer, Cloud Engineer, Software Engineer, and Application Developer roles in startups, product companies, and IT services firms." 
+  },
+  { 
+    q: "Does DevStack include training on modern DevOps practices and deployment?", 
+    a: "Yes. You'll learn complete DevOps workflows including version control with Git/GitHub, CI/CD pipeline creation with Jenkins, Docker containerization, automated testing, deployment strategies, and production environment management. This DevOps expertise makes you valuable for end-to-end application development and deployment." 
+  },
+  { 
+    q: "Will I learn React.js and Node.js for fullstack JavaScript development?", 
+    a: "Absolutely. DevStack provides comprehensive training on React.js for frontend development (components, props, state, hooks, routing) and Node.js with Express.js for backend development (REST APIs, middleware, authentication, database integration). You'll master JavaScript fullstack development from frontend to backend to database." 
+  },
+  { 
+    q: "Does DevStack include AI tools and mentorship from industry experts?", 
+    a: "Yes. DevStack features AI-driven personal tech assistants for coding support, flagship mentors from leading tech companies, training on cutting-edge AI tools like OpenAI, Gemini, and RAG systems, and guidance on using AI for productivity in software development. You'll learn modern development practices used by top tech companies." 
+  }
+]
   },
 
   /* =====================================================
@@ -453,10 +558,8 @@ const courses = [
     slug: "frontend",
     title: "Front-end Development",
     category: "dev",
-      trustImage: "/src/assets/courses/fsd.png",
-
-  // optional (for accessibility / SEO)
-  trustImageAlt: "Industry aligned data engineering curriculum",
+    trustImage: fsdImage,
+    trustImageAlt: "Industry aligned data engineering curriculum",
 
     short: "Learn HTML, CSS, JavaScript & React.",
     duration: "1.5 Months",
@@ -473,79 +576,64 @@ const courses = [
       { title: "Beginners", desc: "Start from scratch." },
       { title: "Designers", desc: "Transition into frontend roles." }
     ],
- highlights: [
-  {
-    icon: "clock",
-    value: "100+ Hours",
-    label: "Live Interactive Sessions"
-  },
-  {
-    icon: "calendar",
-    value: "1 Months",
-    label: "Weekday Classes"
-  },
-  {
-    icon: "ai",
-    value: "AI-Driven",
-    label: "Personal Tech Assistant"
-  },
-  {
-    icon: "offline",
-    value: "10 Days",
-    label: "SoftSkills Preparation"
-  },
-  {
-    icon: "projects",
-    value: "5 Projects",
-    label: "1+ AI Capstones"
-  },
-  {
-    icon: "target",
-    value: "Interview Ready",
-    label: "Tech & Product Roles"
-  },
-  {
-    icon: "mentor",
-    value: "Flagship Mentors",
-    label: "Industry Experts"
-  },
-  {
-    icon: "tech",
-    value: "Cutting-Edge Tech",
-    label: "OpenAI, Gemini, RAG"
-  }
-]
-,
+
+    highlights: [
+      {
+        icon: "clock",
+        value: "100+ Hours",
+        label: "Live Interactive Sessions"
+      },
+      {
+        icon: "calendar",
+        value: "1 Months",
+        label: "Weekday Classes"
+      },
+      {
+        icon: "ai",
+        value: "AI-Driven",
+        label: "Personal Tech Assistant"
+      },
+      {
+        icon: "offline",
+        value: "10 Days",
+        label: "SoftSkills Preparation"
+      },
+      {
+        icon: "projects",
+        value: "5 Projects",
+        label: "1+ AI Capstones"
+      },
+      {
+        icon: "target",
+        value: "Interview Ready",
+        label: "Tech & Product Roles"
+      },
+      {
+        icon: "mentor",
+        value: "Flagship Mentors",
+        label: "Industry Experts"
+      },
+      {
+        icon: "tech",
+        value: "Cutting-Edge Tech",
+        label: "OpenAI, Gemini, RAG"
+      }
+    ],
 
     tools: [
-      { name: "HTML", img: "/src/assets/front end/dev stack/html.svg" },
-  { name: "CSS", img: "/src/assets/front end/dev stack/CSS.jpeg" },
-  { name: "Bootstrap", img: "/src/assets/front end/dev stack/BOOT.png" },
-  { name: "JavaScript", img: "/src/assets/front end/dev stack/js.jpg" },
-  { name: "React.js", img: "/src/assets/front end/dev stack/REACT.jpeg" }
+      { name: "HTML", img: devHTML },
+      { name: "CSS", img: devCSS },
+      { name: "Bootstrap", img: devBootstrap },
+      { name: "JavaScript", img: devJS },
+      { name: "React.js", img: devReact }
     ],
 
     modules: [
-      {
-    title: "HTML",
-    topics: ["Elements & Attributes", "Forms & Tables", "Semantic HTML"]
-  },
-  {
-    title: "CSS",
-    topics: ["Flexbox", "Grid", "Responsive Design"]
-  },
-  {
-    title: "Bootstrap",
-    topics: ["Grid System", "Components", "Customization"]
-  },
-  {
-    title: "JavaScript",
-    topics: ["Variables & Functions", "DOM Manipulation", "ES6 Features"]
-  },
-  {
-    title: "React.js",
-    topics: ["Components & Props", "State & Hooks", "Routing"]
-  }
+      { title: "HTML", topics: ["Elements & Attributes", "Forms & Tables", "Semantic HTML"] },
+      { title: "CSS", topics: ["Flexbox", "Grid", "Responsive Design"] },
+      { title: "Bootstrap", topics: ["Grid System", "Components", "Customization"] },
+      { title: "JavaScript", topics: ["Variables & Functions", "DOM Manipulation", "ES6 Features"] },
+      { title: "React.js", topics: ["Components & Props", "State & Hooks", "Routing"] }
     ],
 
     syllabusPdf: "/syllabus/frontend.pdf",
@@ -554,11 +642,50 @@ const courses = [
 
     roles: ["Frontend Developer", "UI Developer"],
 
-    companies: ["/src/assets/companies/company3.jpeg"],
+    companies: [company3],
 
     faq: [
-      { q: "Is this practical?", a: "Yes, hands-on projects included." }
-    ]
+  { 
+    q: "What is the best front end development course for beginners?", 
+    a: "Vinsup Skill Academy offers a practical front end development course covering HTML, CSS, JavaScript, and modern frameworks." 
+  },
+  { 
+    q: "Do I need coding knowledge to join this course?", 
+    a: "No prior coding experience is required." 
+  },
+  { 
+    q: "What technologies are taught in this course?", 
+    a: "HTML5, CSS3, JavaScript, Bootstrap, responsive design, and UI frameworks." 
+  },
+  { 
+    q: "Is this a job-oriented front end course?", 
+    a: "Yes, the course is designed to make students industry-ready." 
+  },
+  { 
+    q: "Are real projects included in training?", 
+    a: "Yes, students build live websites and professional portfolios." 
+  },
+  { 
+    q: "Does Vinsup Skill Academy provide placement assistance?", 
+    a: "Yes, we offer placement support and interview preparation." 
+  },
+  { 
+    q: "Is this course suitable for students and freshers?", 
+    a: "Yes, it is ideal for students, freshers, and career changers." 
+  },
+  { 
+    q: "Is online training available?", 
+    a: "Yes, we provide online and offline classes." 
+  },
+  { 
+    q: "How can front end development help in a tech career?", 
+    a: "Front end development opens career opportunities in web development, UI development, and software development roles." 
+  },
+  { 
+    q: "Will I create my own portfolio website during training?", 
+    a: "Yes, students create professional portfolio websites as part of the course." 
+  }
+]
   },
 
   /* =====================================================
@@ -568,13 +695,11 @@ const courses = [
     slug: "ui-ux-design",
     title: "UI / UX Design",
     category: "design",
-      trustImage: "/src/assets/courses/ux.png",
-
-  // optional (for accessibility / SEO)
-  trustImageAlt: "Industry aligned data engineering curriculum",
+    trustImage: uxImage,
+    trustImageAlt: "Industry aligned data engineering curriculum",
 
     short: "Design user-centric digital products.",
-    duration: "1..5 Months",
+    duration: "1.5 Months",
     hours: 150,
     mode: "Online + Offline",
     language: "English & Tamil",
@@ -589,152 +714,98 @@ const courses = [
       { title: "Developers", desc: "Add design skills." }
     ],
 
-  tools: [
-  { name: "Figma", img: "/src/assets/front end/uxui/FIGMA.png" },
-  { name: "Adobe Photoshop", img: "/src/assets/front end/uxui/PS.png" },
-  { name: "Adobe Illustrator", img: "/src/assets/front end/uxui/AI.png" },
-  // { name: "Adobe InDesign", img: "/src/assets/front end/uxui/indesign.png" },
-  { name: "Blender", img: "/src/assets/front end/uxui/BLEN.png" }
-]
+    tools: [
+      { name: "Figma", img: uxFigma },
+      { name: "Adobe Photoshop", img: uxPhotoshop },
+      { name: "Adobe Illustrator", img: uxIllustrator },
+      { name: "Blender", img: uxBlender }
+    ],
 
-,
+    highlights: [
+      {
+        icon: "clock",
+        value: "150+ Hours",
+        label: "Live Interactive Sessions"
+      },
+      {
+        icon: "calendar",
+        value: "2 Months",
+        label: "Weekday Classes"
+      },
+      {
+        icon: "ai",
+        value: "AI-Driven",
+        label: "Personal Tech Assistant"
+      },
+      {
+        icon: "offline",
+        value: "10 Days",
+        label: "SoftSkills Preparation"
+      },
+      {
+        icon: "projects",
+        value: "5 Projects",
+        label: "1+ AI Capstones"
+      },
+      {
+        icon: "target",
+        value: "Interview Ready",
+        label: "Tech & Product Roles"
+      },
+      {
+        icon: "mentor",
+        value: "Flagship Mentors",
+        label: "Industry Experts"
+      },
+      {
+        icon: "tech",
+        value: "Cutting-Edge Tech",
+        label: "OpenAI, Gemini, RAG"
+      }
+    ],
 
- highlights: [
-  {
-    icon: "clock",
-    value: "150+ Hours",
-    label: "Live Interactive Sessions"
-  },
-  {
-    icon: "calendar",
-    value: "2 Months",
-    label: "Weekday Classes"
-  },
-  {
-    icon: "ai",
-    value: "AI-Driven",
-    label: "Personal Tech Assistant"
-  },
-  {
-    icon: "offline",
-    value: "10 Days",
-    label: "SoftSkills Preparation"
-  },
-  {
-    icon: "projects",
-    value: "5 Projects",
-    label: "1+ AI Capstones"
-  },
-  {
-    icon: "target",
-    value: "Interview Ready",
-    label: "Tech & Product Roles"
-  },
-  {
-    icon: "mentor",
-    value: "Flagship Mentors",
-    label: "Industry Experts"
-  },
-  {
-    icon: "tech",
-    value: "Cutting-Edge Tech",
-    label: "OpenAI, Gemini, RAG"
-  }
-]
-,
     modules: [
-  {
-    title: "UX Fundamentals",
-    topics: [
-      "What is UX & UI?",
-      "Design Thinking Process",
-      "User-Centered Design",
-      "UX vs UI"
-    ]
-  },
-  {
-    title: "User Research",
-    topics: [
-      "User Research Methods",
-      "Stakeholder Interviews",
-      "User Personas",
-      "Empathy Mapping"
-    ]
-  },
-  {
-    title: "Information Architecture",
-    topics: [
-      "User Flows",
-      "Site Maps",
-      "Card Sorting",
-      "Content Structuring"
-    ]
-  },
-  {
-    title: "Wireframing",
-    topics: [
-      "Low-Fidelity Wireframes",
-      "High-Fidelity Wireframes",
-      "Layout Principles",
-      "Design Grids"
-    ]
-  },
-  {
-    title: "UI Design Principles",
-    topics: [
-      "Color Theory",
-      "Typography",
-      "Spacing & Alignment",
-      "Visual Hierarchy"
-    ]
-  },
-  {
-    title: "Design Tools",
-    topics: [
-      "Figma Basics",
-      "Auto Layout",
-      "Components & Variants",
-      "Design Systems"
-    ]
-  },
-  {
-    title: "Prototyping",
-    topics: [
-      "Interactive Prototypes",
-      "Micro Interactions",
-      "Transitions & Animations",
-      "Usability Testing"
-    ]
-  },
-  {
-    title: "Responsive & Mobile Design",
-    topics: [
-      "Mobile-First Design",
-      "Responsive Layouts",
-      "iOS & Android Guidelines",
-      "Accessibility Basics"
-    ]
-  },
-  {
-    title: "Branding & Visual Design",
-    topics: [
-      "Logo Design Basics",
-      "Icon Design",
-      "Style Guides",
-      "Design Consistency"
-    ]
-  },
-  {
-    title: "Portfolio & Case Studies",
-    topics: [
-      "Case Study Structure",
-      "UX Storytelling",
-      "Portfolio Presentation",
-      "Client Pitching"
-    ]
-  }
-]
-,
+      {
+        title: "UX Fundamentals",
+        topics: ["What is UX & UI?", "Design Thinking Process", "User-Centered Design", "UX vs UI"]
+      },
+      {
+        title: "User Research",
+        topics: ["User Research Methods", "Stakeholder Interviews", "User Personas", "Empathy Mapping"]
+      },
+      {
+        title: "Information Architecture",
+        topics: ["User Flows", "Site Maps", "Card Sorting", "Content Structuring"]
+      },
+      {
+        title: "Wireframing",
+        topics: ["Low-Fidelity Wireframes", "High-Fidelity Wireframes", "Layout Principles", "Design Grids"]
+      },
+      {
+        title: "UI Design Principles",
+        topics: ["Color Theory", "Typography", "Spacing & Alignment", "Visual Hierarchy"]
+      },
+      {
+        title: "Design Tools",
+        topics: ["Figma Basics", "Auto Layout", "Components & Variants", "Design Systems"]
+      },
+      {
+        title: "Prototyping",
+        topics: ["Interactive Prototypes", "Micro Interactions", "Transitions & Animations", "Usability Testing"]
+      },
+      {
+        title: "Responsive & Mobile Design",
+        topics: ["Mobile-First Design", "Responsive Layouts", "iOS & Android Guidelines", "Accessibility Basics"]
+      },
+      {
+        title: "Branding & Visual Design",
+        topics: ["Logo Design Basics", "Icon Design", "Style Guides", "Design Consistency"]
+      },
+      {
+        title: "Portfolio & Case Studies",
+        topics: ["Case Study Structure", "UX Storytelling", "Portfolio Presentation", "Client Pitching"]
+      }
+    ],
 
     syllabusPdf: "/syllabus/ui-ux.pdf",
 
@@ -742,11 +813,50 @@ const courses = [
 
     roles: ["UI Designer", "UX Designer"],
 
-    companies: ["/src/assets/companies/company4.jpeg"],
+    companies: [company4],
 
     faq: [
-      { q: "Do I need drawing skills?", a: "No, creativity is enough." }
-    ]
+  { 
+    q: "Which is the best UX UI design course for beginners?", 
+    a: "Vinsup Skill Academy offers a comprehensive UX UI design course with practical and project-based training." 
+  },
+  { 
+    q: "Is UX UI design suitable for non-designers?", 
+    a: "Yes, this course starts from fundamentals and is beginner-friendly." 
+  },
+  { 
+    q: "What tools are taught in UX UI training?", 
+    a: "Figma, Adobe XD, wireframing, prototyping, and user research tools." 
+  },
+  { 
+    q: "Is this course job-oriented?", 
+    a: "Yes, it focuses on real-world design projects and portfolio creation." 
+  },
+  { 
+    q: "Do you provide placement support?", 
+    a: "Yes, we offer placement assistance and career guidance." 
+  },
+  { 
+    q: "Is coding required for UX UI design?", 
+    a: "No coding knowledge is required." 
+  },
+  { 
+    q: "Is this course available online?", 
+    a: "Yes, online and offline training options are available." 
+  },
+  { 
+    q: "Will I build a design portfolio?", 
+    a: "Yes, students create industry-ready design portfolios." 
+  },
+  { 
+    q: "Who can join this UX UI course?", 
+    a: "Students, freshers, designers, and professionals can join." 
+  },
+  { 
+    q: "What career opportunities are available after UX UI training?", 
+    a: "Students can become UX Designers, UI Designers, Product Designers, and Interaction Designers." 
+  }
+]
   },
 
   /* =====================================================
@@ -756,10 +866,8 @@ const courses = [
     slug: "digital-marketing",
     title: "Digital Marketing",
     category: "marketing",
-      trustImage: "/src/assets/courses/dm.png",
-
-  // optional (for accessibility / SEO)
-  trustImageAlt: "Industry aligned data engineering curriculum",
+    trustImage: dmImage,
+    trustImageAlt: "Industry aligned data engineering curriculum",
 
     short: "Master SEO, Ads, Social Media & Analytics.",
     duration: "2.5 Months",
@@ -776,154 +884,93 @@ const courses = [
       { title: "Students", desc: "Start a marketing career." },
       { title: "Business Owners", desc: "Grow your brand online." }
     ],
- highlights: [
-  {
-    icon: "clock",
-    value: "300+ Hours",
-    label: "Live + Recorded Sessions"
-  },
-  {
-    icon: "calendar",
-    value: "9 Months",
-    label: "Weekend Classes"
-  },
-  {
-    icon: "ai",
-    value: "AI-Driven",
-    label: "Personal Tech Assistant"
-  },
-  {
-    icon: "offline",
-    value: "4 Days",
-    label: "Offline Immersion"
-  },
-  {
-    icon: "projects",
-    value: "15 Projects",
-    label: "3+ AI Capstones"
-  },
-  {
-    icon: "target",
-    value: "Interview Ready",
-    label: "Tech & Product Roles"
-  },
-  {
-    icon: "mentor",
-    value: "Flagship Mentors",
-    label: "Industry Experts"
-  },
-  {
-    icon: "tech",
-    value: "Cutting-Edge Tech",
-    label: "OpenAI, Gemini, RAG"
-  }
-]
-,
 
-  tools: [
-  {
-    name: "Google Analytics",
-    img: "/src/assets/front end/digital marketing/GAD.png"
-  },
-  {
-    name: "Google Ads",
-    img: "/src/assets/front end/digital marketing/GAD.png"
-  },
-  {
-    name: "Meta Ads Manager",
-    img: "/src/assets/front end/digital marketing/META.png"
-  },
-  {
-    name: "Hubspot",
-    img: "/src/assets/front end/digital marketing/HUB.png"
-  },
-  {
-    name: "Shopify",
-    img: "/src/assets/front end/digital marketing/123.svg"
-  },
-  {
-    name: "WordPress",
-    img: "/src/assets/front end/digital marketing/WORD.png"
-  },
-  {
-    name: "Canva",
-    img: "/src/assets/front end/digital marketing/CANVA.png"
-  },
-  {
-    name: "Mailchimp",
-    img: "/src/assets/front end/digital marketing/MAIL.png"
-  },
-  {
-    name: "Elementor",
-    img: "/src/assets/front end/digital marketing/ELE.png"
-  },
-  {
-    name: "Hrefs",
-    img: "/src/assets/front end/digital marketing/HREF.png"
-  }
-]
+    highlights: [
+      {
+        icon: "clock",
+        value: "300+ Hours",
+        label: "Live + Recorded Sessions"
+      },
+      {
+        icon: "calendar",
+        value: "9 Months",
+        label: "Weekend Classes"
+      },
+      {
+        icon: "ai",
+        value: "AI-Driven",
+        label: "Personal Tech Assistant"
+      },
+      {
+        icon: "offline",
+        value: "4 Days",
+        label: "Offline Immersion"
+      },
+      {
+        icon: "projects",
+        value: "15 Projects",
+        label: "3+ AI Capstones"
+      },
+      {
+        icon: "target",
+        value: "Interview Ready",
+        label: "Tech & Product Roles"
+      },
+      {
+        icon: "mentor",
+        value: "Flagship Mentors",
+        label: "Industry Experts"
+      },
+      {
+        icon: "tech",
+        value: "Cutting-Edge Tech",
+        label: "OpenAI, Gemini, RAG"
+      }
+    ],
 
-,
+    tools: [
+      { name: "Google Analytics", img: dmGoogleAds },
+      { name: "Google Ads", img: dmGoogleAds },
+      { name: "Meta Ads Manager", img: dmMeta },
+      { name: "Hubspot", img: dmHubspot },
+      { name: "Shopify", img: dmShopify },
+      { name: "WordPress", img: dmWordPress },
+      { name: "Canva", img: dmCanva },
+      { name: "Mailchimp", img: dmMailchimp },
+      { name: "Elementor", img: dmElementor },
+      { name: "Hrefs", img: dmHrefs }
+    ],
 
     modules: [
-  {
-    title: "Digital Marketing Foundations",
-    topics: [
-      "Introduction to Digital Marketing",
-      "Marketing Funnel & Buyer Journey",
-      "Industry Trends & AI in Marketing"
-    ]
-  },
-  {
-    title: "Website Creation & Optimization",
-    topics: [
-      "WordPress Setup & Basics",
-      "Landing Pages & UX",
-      "Website Speed & Mobile Optimization"
-    ]
-  },
-  {
-    title: "Search Engine Optimization (SEO)",
-    topics: [
-      "Keyword Research",
-      "On-Page & Off-Page SEO",
-      "Local SEO & Google Business Profile"
-    ]
-  },
-  {
-    title: "Social Media & Content Marketing",
-    topics: [
-      "Content Strategy & Copywriting",
-      "Instagram, Facebook & LinkedIn Marketing",
-      "Organic Growth Techniques"
-    ]
-  },
-  {
-    title: "Paid Advertising (Google & Meta Ads)",
-    topics: [
-      "Google Ads Fundamentals",
-      "Meta Ads (Facebook & Instagram)",
-      "Audience Targeting & Retargeting"
-    ]
-  },
-  {
-    title: "Analytics & Performance Tracking",
-    topics: [
-      "Google Analytics 4",
-      "Conversion & Event Tracking",
-      "Performance Reporting"
-    ]
-  },
-  {
-    title: "Freelancing & Career Preparation",
-    topics: [
-      "Email Marketing Basics",
-      "Freelancing Platforms & Client Handling",
-      "Resume, Portfolio & Interview Prep"
-    ]
-  }
-]
-,
+      {
+        title: "Digital Marketing Foundations",
+        topics: ["Introduction to Digital Marketing", "Marketing Funnel & Buyer Journey", "Industry Trends & AI in Marketing"]
+      },
+      {
+        title: "Website Creation & Optimization",
+        topics: ["WordPress Setup & Basics", "Landing Pages & UX", "Website Speed & Mobile Optimization"]
+      },
+      {
+        title: "Search Engine Optimization (SEO)",
+        topics: ["Keyword Research", "On-Page & Off-Page SEO", "Local SEO & Google Business Profile"]
+      },
+      {
+        title: "Social Media & Content Marketing",
+        topics: ["Content Strategy & Copywriting", "Instagram, Facebook & LinkedIn Marketing", "Organic Growth Techniques"]
+      },
+      {
+        title: "Paid Advertising (Google & Meta Ads)",
+        topics: ["Google Ads Fundamentals", "Meta Ads (Facebook & Instagram)", "Audience Targeting & Retargeting"]
+      },
+      {
+        title: "Analytics & Performance Tracking",
+        topics: ["Google Analytics 4", "Conversion & Event Tracking", "Performance Reporting"]
+      },
+      {
+        title: "Freelancing & Career Preparation",
+        topics: ["Email Marketing Basics", "Freelancing Platforms & Client Handling", "Resume, Portfolio & Interview Prep"]
+      }
+    ],
 
     syllabusPdf: "/syllabus/digital-marketing.pdf",
 
@@ -931,11 +978,50 @@ const courses = [
 
     roles: ["Digital Marketer", "SEO Executive"],
 
-    companies: ["/src/assets/companies/company1.jpeg"],
+    companies: [company1],
 
     faq: [
-      { q: "Is this practical?", a: "Yes, live campaign exposure." }
-    ]
+  { 
+    q: "What is the best digital marketing course for beginners in India?", 
+    a: "Vinsup Skill Academy offers one of the best digital marketing courses for beginners, covering SEO, Google Ads, social media marketing, and real-time projects." 
+  },
+  { 
+    q: "Is this a job-oriented digital marketing course?", 
+    a: "Yes. Our digital marketing course is 100% job-oriented with live campaigns, practical tools, and placement assistance." 
+  },
+  { 
+    q: "Do I need prior experience to learn digital marketing?", 
+    a: "No prior experience is required. This course is designed for students, freshers, and working professionals." 
+  },
+  { 
+    q: "Does Vinsup Skill Academy provide placement support for digital marketing?", 
+    a: "Yes, we provide placement guidance, interview preparation, and resume building support." 
+  },
+  { 
+    q: "Is this digital marketing course online or offline?", 
+    a: "We offer flexible learning options including online and offline classes." 
+  },
+  { 
+    q: "What tools will I learn in digital marketing?", 
+    a: "You will learn SEO tools, Google Ads, Google Analytics, Meta Ads, email marketing tools, and AI-based marketing platforms." 
+  },
+  { 
+    q: "How long does it take to become a digital marketing professional?", 
+    a: "With consistent learning and practical exposure, students can become job-ready within a few months." 
+  },
+  { 
+    q: "Is certification provided after completion?", 
+    a: "Yes, students receive an industry-recognized certification from Vinsup Skill Academy." 
+  },
+  { 
+    q: "Why choose Vinsup Skill Academy for digital marketing training?", 
+    a: "We offer expert trainers, live projects, industry-relevant curriculum, and career-focused training." 
+  },
+  { 
+    q: "Can I start freelancing or a digital marketing agency after this course?", 
+    a: "Yes, this course prepares students for freelancing, agency work, and entrepreneurship opportunities." 
+  }
+]
   }
 ];
 

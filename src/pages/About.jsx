@@ -1,8 +1,32 @@
 import React ,{useEffect} from "react";
 import Counter from "../components/Counter";
 import QuickEnquiry from "../components/QuickEnquiry";
-import "./About.css";
+import vinsupBuilding from "../assets/vinsup_building.png";
+import growthImg from "../assets/growth.png";
+import vinsupInfotech from "../assets/VINSUP INFOTECH.png";
+import srbBankers from "../assets/SRB BANKERS.png";
+import vinolya from "../assets/VINOLYA.png";
+import ramtel from "../assets/ramtel.png";
+import g1 from "../assets/gallery/1.jpg";
+import g2 from "../assets/gallery/2.jpg";
+import g3 from "../assets/gallery/3.jpg";
+import g4 from "../assets/gallery/4.jpg";
+import g5 from "../assets/gallery/5.jpg";
+import g6 from "../assets/gallery/6.jpg";
+import g7 from "../assets/gallery/7.jpg";
+import g8 from "../assets/gallery/8.jpg";
+import g9 from "../assets/gallery/9.jpg";
+import g10 from "../assets/gallery/10.jpg"; 
 
+
+
+
+
+import "./About.css";
+export const galleryImages = [
+  g1, g2, g3, g4, g5,
+  g6, g7, g8, g9
+];
 export default function About() {
  useEffect(() => {
   const steps = document.querySelectorAll("[data-step]");
@@ -25,6 +49,7 @@ export default function About() {
       threshold: 0.55, // smoother switching
     }
   );
+
 
   steps.forEach((step) => observer.observe(step));
 
@@ -54,13 +79,10 @@ export default function About() {
           </div>
 
           {/* Right - Image */}
-          <div className="about-hero-image">
-            {/* <img
-              src="/src/assets/about/hero.jpg"
-              alt="About Vinsup Skill Academy"
-            /> */}
-            <img src="/src/assets/vinsup_building.png" alt="vinsupskillacademy" />
-          </div>
+         <div className="about-hero-image">
+  <img src={vinsupBuilding} alt="vinsupskillacademy" />
+</div>
+
 
         </div>
       </section>
@@ -97,11 +119,9 @@ export default function About() {
 
     {/* Story Image */}
     <div className="story-media">
-      <img
-        src="src/assets/growth.png"
-        alt="Our Story"
-      />
-    </div>
+  <img src={growthImg} alt="Our Story" />
+</div>
+
 
     {/* Story Content */}
     <div className="story-flow">
@@ -192,20 +212,21 @@ export default function About() {
     <div className="group-grid">
 
       <div className="group-card">
-        <img src="/src/assets/VINSUP INFOTECH.png" alt="Company 1" />
-      </div>
+  <img src={vinsupInfotech} alt="Vinsup Info Tech" />
+</div>
 
-      <div className="group-card">
-        <img src="/src/assets/SRB BANKERS.png" alt="Company 2" />
-      </div>
+<div className="group-card">
+  <img src={srbBankers} alt="SRB Bankers" />
+</div>
 
-      <div className="group-card">
-        <img src="/src/assets/VINOLYA.png" alt="Company 3" />
-      </div>
+<div className="group-card">
+  <img src={vinolya} alt="Vinolya" />
+</div>
 
-      <div className="group-card">
-        <img src="/src/assets/ramtel.png" alt="Company 4" />
-      </div>
+<div className="group-card">
+  <img src={ramtel} alt="Ramtel" />
+</div>
+
 
     </div>
 
@@ -225,19 +246,12 @@ export default function About() {
       className="gallery-grid-fixed"
      
     >
-      {Array.from({ length: 9 }).map((_, i) => (
-        <div
-          key={i}
-          className="gallery-item"
-         
-        >
-          <img
-            src={`/src/assets/gallery/${i + 1}.jpg`}
-            alt={`Campus ${i + 1}`}
-           
-          />
-        </div>
-      ))}
+     {galleryImages.map((img, i) => (
+  <div key={i} className="gallery-item">
+    <img src={img} alt={`Campus ${i + 1}`} />
+  </div>
+))}
+
     </div>
 
   </div>
