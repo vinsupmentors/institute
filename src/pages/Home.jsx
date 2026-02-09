@@ -26,7 +26,7 @@ import placementImg from "../assets/jrp/PlacementAssistance.png";
 
 
 
-import whoarewe from '../assets/courses/whoarewe.png'
+import whoarewe from '../assets/whoarewe.png'
 const API_URL =
   "https://script.google.com/macros/s/AKfycbxl_6f8kPi0cMxa3XwE_FUhZMbUG6KolMIAFvSQb7PAgTXgSO1WB3Pv7eyyAw1NIZKN5w/exec";
 
